@@ -1,0 +1,19 @@
+@import '_colors.scss';
+@import '_typography.scss';
+
+.button-1 {
+  font-family: $f-semibold;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: $c-yellow-500;
+  background-color: transparent;
+  border: 2px solid $c-yellow-500;
+  width: 75px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 225px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
