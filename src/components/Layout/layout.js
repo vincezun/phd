@@ -2,10 +2,11 @@ import React, { Fragment } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
 import Navbar from './navbar';
+import Footer from './footer';
 
 import '../../styles/layout.scss';
 
-const layout = ({ children }) => (
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -20,11 +21,12 @@ const layout = ({ children }) => (
       <Fragment>
         <Navbar />
         <div>
-          <main>{children}</main>
+          <main role='main'>{children}</main>
         </div>
+        <Footer />
       </Fragment>
     )}
   />
 );
 
-export default layout;
+export default Layout;
