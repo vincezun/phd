@@ -2,15 +2,14 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   siteMetadata: {
-    title: 'Plant Hire Division',
-    description:
-      "PHd provide plant, MEWPS, tool, accommodation and waste solutions to site's through out the UK and Europen Union. With a network of approved suppliers whom we know are up to the job and meet the high standards we demand.",
-    author: '@vincezun'
+    title: `Plant Hire Division`,
+    description: `PHd provide plant, MEWPS, tool, accommodation and waste solutions to site's through out the UK and Europen Union. With a network of approved suppliers whom we know are up to the job and meet the high standards we demand.`,
+    author: `@vincezun`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-plugin-sass',
+      resolve: `gatsby-plugin-sass`,
       options: {
         postCssPlugins: [
           autoprefixer({
@@ -18,6 +17,14 @@ module.exports = {
             flexbox: true
           })
         ]
+      }
+    },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: `http://localhost:1337`,
+        contentTypes: [`servicesoverview`],
+        queryLimit: 1000
       }
     }
 
