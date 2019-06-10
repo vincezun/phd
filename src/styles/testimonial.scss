@@ -1,0 +1,28 @@
+@import '_colors.scss';
+@import '_typography.scss';
+
+.yellow-background {
+  background-color: $c-yellow-500;
+
+  .w-container {
+    padding: 7.5rem 3rem;
+  }
+
+  .testimonial {
+    text-align: center;
+
+    .quote {
+      font: 2.8rem/3.2rem $f-semibold-it;
+      font-weight: 600;
+      color: $c-black;
+      letter-spacing: 2px;
+    }
+
+    .client {
+      font: 1.6rem/2.7rem $f-regular;
+      color: $c-black;
+      margin-top: 3rem;
+      text-transform: uppercase;
+    }
+  }
+}

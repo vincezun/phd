@@ -1,0 +1,91 @@
+@import '_colors.scss';
+@import '_typography.scss';
+
+.footer {
+  background-color: $c-gray-650;
+  background-image: linear-gradient(180deg, $c-gray-900, $c-gray-900);
+
+  .w-container {
+    padding: 4rem 3rem;
+  }
+
+  .footer-links {
+    .phd-logo {
+      display: none;
+    }
+
+    .about-us {
+      .title {
+        font: 1.6rem/2.8rem $f-light;
+        color: $c-white;
+      }
+
+      .description {
+        font: 1.6rem/3rem $f-light;
+        color: $c-gray-200;
+        margin-top: 1rem;
+
+        .read-more {
+          font: 1.6rem/3rem $f-semibold;
+          color: $c-yellow-150;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .social-links {
+      .title {
+        font: 1.6rem/2.7rem $f-light;
+        color: $c-white;
+        margin-left: 2.5rem;
+      }
+
+      .twitter-link,
+      .facebook-link,
+      .instagram-link {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        align-items: center;
+      }
+
+      .twitter-link {
+        margin-top: 3rem;
+      }
+
+      .facebook-link,
+      .instagram-link {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .footer-bar {
+    border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+
+    .footer-detail {
+      .credits,
+      .registered {
+        font: 1.6rem/2.7rem $f-light;
+        color: $c-white;
+        list-style: none;
+      }
+
+      .terms a,
+      .privacy a,
+      .blog a {
+        font: 1.6rem/3.2rem $f-light;
+        color: $c-white;
+        list-style: none;
+
+        &:hover {
+          color: $c-yellow;
+        }
+      }
+
+      .registered,
+      .terms {
+        margin-top: 3rem;
+      }
+    }
+  }
+}
