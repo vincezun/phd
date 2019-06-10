@@ -62,6 +62,10 @@
           padding: 0.5rem 0;
           a {
             font-size: 1.2rem;
+
+            &.active-link {
+              color: $c-white;
+            }
           }
         }
       }
@@ -93,6 +97,10 @@
         color: $c-black;
         display: block;
         user-select: none;
+      }
+
+      a.active-link {
+        color: $c-white;
       }
     }
 
@@ -182,10 +190,10 @@
 
     .submit-form-btn {
       background-color: transparent;
-      border: 2px solid $c-yellow-550;
+      border: 2px solid $c-yellow;
       border-radius: 25px;
       font: 1.4rem/2rem $f-semibold;
-      color: $c-yellow-550;
+      color: $c-yellow;
       letter-spacing: 1px;
       padding: 0.9rem 1.5rem;
       width: 200px;
