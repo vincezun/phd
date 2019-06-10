@@ -77,20 +77,26 @@ class Navbar extends Component {
         <div className='nav-menu'>
           <div className='w-container'>
             <Link to='/'>
-              <img src={phdLogo} alt='PHd logo' className='phd-logo' />
+              <img
+                src={phdLogo}
+                alt='Plant Hire Division logo'
+                className='phd-logo'
+              />
             </Link>
           </div>
-          <ul className='nav-overlay' id='nav-overlay'>
+          <ul className='nav-overlay' id='nav-overlay' role='tree'>
             <img
               onClick={this.hideOverlay}
               src={closeBtn}
               alt='Close button'
               className='close-btn'
+              role='button'
             />
             <li
               onClick={this.toggleDropdown}
               className='dropdown-toggle'
               id='dropdown-toggle'
+              role='presentation'
             >
               <div className='dropdown-menu'>
                 <p>Services</p>
@@ -100,35 +106,83 @@ class Navbar extends Component {
                   className='arrow-down-black'
                 />
               </div>
-              <ul className='dropdown-link'>
-                <li>
-                  <Link to='/plant-hire'>Plant Hire</Link>
+              <ul className='dropdown-link' role='tree'>
+                <li role='presentation'>
+                  <Link
+                    to='/plant-hire'
+                    role='treeitem'
+                    activeClassName='active-link'
+                  >
+                    Plant Hire
+                  </Link>
                 </li>
-                <li>
-                  <Link to='/working-platform'>Working Plantform</Link>
+                <li role='presentation'>
+                  <Link
+                    to='/working-platform'
+                    role='treeitem'
+                    activeClassName='active-link'
+                  >
+                    Working Plantform
+                  </Link>
                 </li>
-                <li>
-                  <Link to='/specialities'>Specialities</Link>
+                <li role='presentation'>
+                  <Link
+                    to='/specialities'
+                    role='treeitem'
+                    activeClassName='active-link'
+                  >
+                    Specialities
+                  </Link>
                 </li>
-                <li>
-                  <Link to='/tool-hire'>Tool Hire</Link>
+                <li role='presentation'>
+                  <Link
+                    to='/tool-hire'
+                    role='treeitem'
+                    activeClassName='active-link'
+                  >
+                    Tool Hire
+                  </Link>
                 </li>
               </ul>
             </li>
-            <li>
-              <Link to='/case-studies'>Case Studies</Link>
+            <li role='presentation'>
+              <Link
+                to='/case-studies'
+                role='treeitem'
+                activeClassName='active-link'
+              >
+                Case Studies
+              </Link>
             </li>
-            <li>
-              <Link to='/resources'>Resources</Link>
+            <li role='presentation'>
+              <Link
+                to='/resources'
+                role='treeitem'
+                activeClassName='active-link'
+              >
+                Resources
+              </Link>
             </li>
-            <li>
-              <Link to='/training'>Training</Link>
+            <li role='presentation'>
+              <Link
+                to='/training'
+                role='treeitem'
+                activeClassName='active-link'
+              >
+                Training
+              </Link>
             </li>
-            <li>
-              <Link to='/contact'>Contact</Link>
+            <li role='presentation'>
+              <Link to='/contact' role='treeitem' activeClassName='active-link'>
+                Contact
+              </Link>
             </li>
-            <li>
-              <p onClick={this.openModal} className='request-callback-link'>
+            <li role='presentation'>
+              <p
+                onClick={this.openModal}
+                className='request-callback-link'
+                role='treeitem'
+              >
                 Request Callback
               </p>
               <Modal
@@ -143,6 +197,7 @@ class Navbar extends Component {
                   src={closeBtn}
                   alt='Close button'
                   className='close-modal-btn'
+                  role='button'
                 />
 
                 <Formik
@@ -221,6 +276,8 @@ class Navbar extends Component {
                         className='submit-form-btn'
                         id='submit-form-btn'
                         value='Submit Form'
+                        aria-label='Submit Form'
+                        role='button'
                       />
                       <div className='success-msg' id='success-msg'>
                         <p>Thank you! Your submission has been received!</p>
@@ -242,6 +299,7 @@ class Navbar extends Component {
             alt='Menu button'
             className='menu-btn'
             id='menu-btn'
+            role='menu'
           />
         </div>
       </nav>
