@@ -29,6 +29,101 @@
         color: $c-gray-200;
         margin-top: 1.5rem;
       }
+
+      .arrow-down-yellow {
+        display: none;
+      }
+    }
+  }
+
+  section:nth-child(2) {
+    background-color: $c-black;
+
+    .w-container {
+      padding: 0 3rem;
+      display: grid;
+      grid-template-columns: 1fr 10px;
+      align-items: center;
+    }
+
+    .main-section {
+      .white-circle,
+      .white-tile-vertical,
+      .white-tile-horizontal,
+      .forklift,
+      .scissor-lift {
+        display: none;
+      }
+
+      .services-overviews {
+        background-color: $c-yellow;
+        padding: 2.5rem 0;
+
+        &:nth-last-of-type(-n + 3) {
+          margin-top: 0.5rem;
+        }
+
+        .title {
+          font: 1.6rem/3.2rem $f-bold;
+          color: $c-black;
+        }
+
+        .arrow-right-yellow,
+        .arrow-right-black {
+          background-image: url('../images/arrow-right-black.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center center;
+          width: 10px;
+          height: 19px;
+        }
+      }
+    }
+  }
+
+  section:nth-child(4) {
+    background-color: $c-white;
+
+    .w-container {
+      padding: 7rem 3rem 5rem;
+    }
+
+    .account-managers-section {
+      text-align: center;
+
+      .title {
+        font: 2.8rem/3.2rem $f-bold;
+        color: $c-black;
+      }
+
+      .dedicated-am {
+        margin-top: 4.5rem;
+
+        .am-one,
+        .am-three {
+          width: 28px;
+        }
+
+        .am-two {
+          width: 19px;
+        }
+
+        .title {
+          font: 2.6rem/3.2rem $f-bold;
+          color: $c-black;
+          margin-top: 1rem;
+        }
+
+        .description {
+          font: 1.6rem/3rem $f-light;
+          color: $c-gray-200;
+          margin-top: 1rem;
+        }
+      }
+
+      .account-managers {
+        display: none;
+      }
     }
   }
 }

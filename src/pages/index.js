@@ -1,30 +1,175 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'gatsby';
 
 import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
+import GetInTouch from '../components/get-in-touch';
+import Testimonial from '../components/testimonial';
 import '../styles/index.scss';
 
-class index extends Component {
-  render() {
-    return (
-      <Layout>
-        <SEO title='Home' />
-        <div className='home-wrapper'>
-          <section>
-            <div className='hero-section w-container'>
-              <h1>Ensuring your project remains up and running</h1>
-              <p>
-                PHd provide plant, MEWPS, tool, accommodation and waste
-                solutions to site's through out the UK and Europen Union. With a
-                network of approved suppliers whom we know are up to the job and
-                meet the high standards we demand.
-              </p>
-            </div>
-          </section>
-        </div>
-      </Layout>
-    );
-  }
-}
+import whiteCirle from '../images/white-circle.png';
+import whiteTileHorizontal from '../images/white-tile-horizontal.png';
+import whiteTileVertical from '../images/white-tile-vertical.png';
+import forklift from '../images/forklift.png';
+import scissorlift from '../images/scissorlift.png';
+import amIcon1 from '../images/am-icon-1.png';
+import amIcon2 from '../images/am-icon-2.png';
+import amIcon3 from '../images/am-icon-3.png';
+import accountManagers from '../images/account-managers.png';
+import arrowDownYellow from '../images/arrow-down-yellow.png';
 
-export default index;
+const Home = () => (
+  <Layout>
+    <SEO title='Home' />
+    <div className='home-wrapper'>
+      <section>
+        <div
+          className='hero-section w-container'
+          role='img'
+          aria-label='Plant Hire Division Facility'
+        >
+          <h1>Ensuring your project remains up and running</h1>
+          <p>
+            PHd provide plant, MEWPS, tool, accommodation and waste solutions to
+            site's through out the UK and Europen Union. With a network of
+            approved suppliers whom we know are up to the job and meet the high
+            standards we demand.
+          </p>
+          <img
+            src={arrowDownYellow}
+            alt='Arrow down yellow'
+            className='arrow-down-yellow'
+          />
+        </div>
+      </section>
+      <section>
+        <div className='main-section'>
+          <figure className='services-overviews'>
+            <Link to='/plant-hire'>
+              <div className='w-container'>
+                <img
+                  src={whiteCirle}
+                  alt='White Circle'
+                  className='white-circle'
+                />
+                <img
+                  src={whiteTileVertical}
+                  alt='White Tile Vertical'
+                  className='white-tile-vertical'
+                />
+                <figcaption className='title'>Plant Hire</figcaption>
+                <div
+                  className='arrow-right-yellow'
+                  aria-label='Yellow right arrow button'
+                  role='button'
+                />
+              </div>
+            </Link>
+          </figure>
+          <figure className='services-overviews'>
+            <Link to='/working-platforms'>
+              <div className='w-container'>
+                <img
+                  src={scissorlift}
+                  alt='Scissorlift'
+                  className='scissor-lift'
+                />
+                <figcaption className='title'>Working Platforms</figcaption>
+                <div
+                  className='arrow-right-black'
+                  aria-label='Black right arrow button'
+                  role='button'
+                />
+              </div>
+            </Link>
+          </figure>
+          <figure className='services-overviews'>
+            <Link to='/specialities'>
+              <div className='w-container'>
+                <img src={forklift} alt='Forklift' className='forklift' />
+                <figcaption className='title'>Specialities</figcaption>
+                <div
+                  className='arrow-right-black'
+                  aria-label='Black right arrow button'
+                  role='button'
+                />
+              </div>
+            </Link>
+          </figure>
+          <figure className='services-overviews'>
+            <Link to='/tool-hire'>
+              <div className='w-container'>
+                <img
+                  src={whiteCirle}
+                  alt='White Circle'
+                  className='white-circle'
+                />
+                <img
+                  src={whiteTileHorizontal}
+                  alt='White Tile Horizontal'
+                  className='white-tile-horizontal'
+                />
+                <figcaption className='title'>Tool Hire</figcaption>
+                <div
+                  className='arrow-right-yellow'
+                  aria-label='Yellow right arrow button'
+                  role='button'
+                />
+              </div>
+            </Link>
+          </figure>
+        </div>
+      </section>
+      <GetInTouch />
+      <section>
+        <div className='account-managers-section w-container'>
+          <p className='title'>Dedicated Account Managers</p>
+          <figure className='dedicated-am'>
+            <img
+              src={amIcon1}
+              alt='Account Manager icon one'
+              className='am-one'
+            />
+            <figcaption className='title'>Problem</figcaption>
+            <p className='description'>
+              Donec sed odio duum sociis natoque penatibus et magnis dis
+              parturient montes, nascetur ridiculusonec sed.
+            </p>
+          </figure>
+          <figure className='dedicated-am'>
+            <img
+              src={amIcon2}
+              alt='Account Manager icon two'
+              className='am-two'
+            />
+            <figcaption className='title'>Solution</figcaption>
+            <p className='description'>
+              Donec sed odio duum sociis natoque penatibus et magnis dis
+              parturient montes, nascetur ridiculusonec sed.
+            </p>
+          </figure>
+          <figure className='dedicated-am'>
+            <img
+              src={amIcon3}
+              alt='Account Manager icon three'
+              className='am-three'
+            />
+            <figcaption className='title'>Delivery</figcaption>
+            <p className='description'>
+              Donec sed odio duum sociis natoque penatibus et magnis dis
+              parturient montes, nascetur ridiculusonec sed.
+            </p>
+          </figure>
+          <img
+            src={accountManagers}
+            alt='Account Managers group'
+            className='account-managers'
+          />
+        </div>
+      </section>
+      <Testimonial />
+    </div>
+  </Layout>
+);
+
+export default Home;
