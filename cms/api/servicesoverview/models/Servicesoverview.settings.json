@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "servicesoverviews",
+  "info": {
+    "name": "servicesoverview",
+    "description": "Services Overviews"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "author": {
+      "model": "user",
+      "via": "servicesoverviews",
+      "plugin": "users-permissions"
+    }
+  }
+}
