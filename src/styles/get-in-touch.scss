@@ -1,5 +1,6 @@
 @import '_colors.scss';
 @import '_typography.scss';
+@import '_mixins.scss';
 
 .stripe-tile-background {
   background-image: linear-gradient(180deg, #0b0b0b, transparent 100%),
@@ -11,14 +12,39 @@
 
   .w-container {
     padding: 7.5rem 3rem;
+
+    @include breakpoint(sm-screen) {
+      padding: 7.5rem 18%;
+    }
+
+    @include breakpoint(md-lg-screen) {
+      padding: 7.5rem 3rem;
+    }
   }
 
   .get-in-touch {
     text-align: center;
 
+    @include breakpoint(md-lg-screen) {
+      display: grid;
+      grid-template-columns: 341px 344px;
+      grid-column-gap: 2.5rem;
+      justify-content: center;
+      align-items: center;
+    }
+
     .title,
     .get-in-touch-link {
       font: 2.6rem/3.2rem $f-bold;
+
+      @include breakpoint(sm-screen) {
+        font: 2.8rem/3.4rem $f-bold;
+      }
+
+      @include breakpoint(md-lg-screen) {
+        font: 4rem/5rem $f-bold;
+        text-align: left;
+      }
     }
 
     .title {
@@ -28,12 +54,21 @@
     .get-in-touch-link {
       color: $c-yellow-500;
       text-decoration: underline;
+
+      @include breakpoint(md-lg-screen) {
+        margin-left: -11.3rem;
+      }
     }
 
     .description {
       font: 1.6rem/2.7rem $f-light;
       color: $c-gray-200;
       margin-top: 3rem;
+
+      @include breakpoint(md-lg-screen) {
+        text-align: left;
+        margin-top: 0rem;
+      }
     }
   }
 }

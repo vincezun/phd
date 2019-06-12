@@ -1,23 +1,37 @@
 @import '_colors.scss';
 @import '_typography.scss';
+@import '_mixins.scss';
 
 .nav {
   position: absolute;
   width: 100%;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.6),
+    transparent 99%
+  );
+
+  @include breakpoint(md-lg-screen) {
+    display: grid;
+    grid-template-columns: 384px 384px;
+    justify-content: center;
+  }
 
   .w-container {
     padding: 3rem 3rem;
   }
 
   .nav-menu {
-    background-image: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.6),
-      transparent 99%
-    );
-
     .phd-logo {
       width: 75px;
+
+      @include breakpoint(sm-screen) {
+        width: 100px;
+      }
+
+      @include breakpoint(md-lg-screen) {
+        width: 150px;
+      }
     }
   }
 
@@ -52,6 +66,14 @@
         .arrow-down-black {
           width: 10px;
         }
+
+        @include breakpoint(sm-screen) {
+          grid-template-columns: 110px 12px;
+
+          .arrow-down-black {
+            width: 12px;
+          }
+        }
       }
 
       .dropdown-link {
@@ -60,11 +82,20 @@
 
         li {
           padding: 0.5rem 0;
+
           a {
             font-size: 1.2rem;
 
             &.active-link {
               color: $c-white;
+            }
+          }
+
+          @include breakpoint(sm-screen) {
+            padding: 0.8rem 0;
+
+            a {
+              font-size: 1.6rem;
             }
           }
         }
@@ -83,6 +114,10 @@
       margin-bottom: 2rem;
       margin-right: 0.8rem;
       cursor: pointer;
+
+      @include breakpoint(sm-screen) {
+        width: 32px;
+      }
     }
 
     li {
@@ -97,10 +132,18 @@
         color: $c-black;
         display: block;
         user-select: none;
+
+        @include breakpoint(sm-screen) {
+          font: 2.4rem/2.4rem $f-semibold;
+        }
       }
 
       a.active-link {
         color: $c-white;
+      }
+
+      @include breakpoint(sm-screen) {
+        padding: 2rem 0;
       }
     }
 
@@ -109,18 +152,47 @@
     }
   }
 
-  .menu-btn {
-    position: absolute;
-    top: 3.5rem;
-    right: 3rem;
-    width: 20px;
-    cursor: pointer;
-  }
+  .menu-section {
+    @include breakpoint(md-lg-screen) {
+      display: grid;
+      grid-template-columns: 100px 30px;
+      justify-content: flex-end;
+      grid-column-gap: 3rem;
+    }
 
-  .call-btn {
-    position: absolute;
-    top: 3rem;
-    right: 7rem;
+    .menu-btn {
+      position: absolute;
+      top: 3.5rem;
+      right: 3rem;
+      width: 20px;
+      cursor: pointer;
+
+      @include breakpoint(sm-screen) {
+        width: 30px;
+      }
+
+      @include breakpoint(md-lg-screen) {
+        position: relative;
+        top: 0.5rem;
+        right: 0;
+      }
+    }
+
+    .call-btn {
+      position: absolute;
+      top: 3rem;
+      right: 7rem;
+
+      @include breakpoint(sm-screen) {
+        right: 9rem;
+      }
+
+      @include breakpoint(md-lg-screen) {
+        position: relative;
+        top: 0;
+        right: 0;
+      }
+    }
   }
 }
 
@@ -140,10 +212,18 @@
     outline: none;
   }
 
+  @include breakpoint(sm-screen) {
+    width: 75%;
+  }
+
   .close-modal-btn {
     width: 20px;
     float: right;
     cursor: pointer;
+
+    @include breakpoint(sm-screen) {
+      width: 25px;
+    }
   }
 
   .callback-form {
@@ -152,6 +232,10 @@
       color: $c-white;
       text-align: center;
       margin-top: 4rem;
+
+      @include breakpoint(sm-screen) {
+        font: 4.2rem/4.7rem $f-bold;
+      }
     }
 
     %message-shared {
@@ -177,6 +261,7 @@
       width: 100%;
       margin-top: 0.5rem;
       border: 1px solid transparent;
+      font: 1.6rem/2rem $f-regular;
 
       &:focus {
         outline: none;
@@ -186,6 +271,10 @@
     .w-full-name,
     .w-phone-number {
       margin-top: 2rem;
+
+      @include breakpoint(sm-screen) {
+        margin-top: 4rem;
+      }
     }
 
     .submit-form-btn {
@@ -207,7 +296,7 @@
     }
 
     .err-msg {
-      font: 1.2rem $f-light;
+      font: 1.4rem $f-regular;
       margin-top: 1rem;
       color: $c-red;
     }
@@ -219,7 +308,7 @@
       margin-top: 4rem;
 
       p {
-        font: 1.4rem/2rem $f-light;
+        font: 1.6rem/2rem $f-regular;
         color: $c-black;
         text-align: center;
       }
@@ -234,4 +323,10 @@
   right: 0;
   bottom: 0;
   background-color: rgba(11, 11, 11, 0.75);
+}
+
+.scroll-disabled {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
 }

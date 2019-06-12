@@ -1,5 +1,6 @@
 @import '_colors.scss';
 @import '_typography.scss';
+@import '_mixins.scss';
 
 .footer {
   background-color: $c-gray-650;
@@ -16,17 +17,18 @@
 
     .about-us {
       .title {
-        font: 1.6rem/2.8rem $f-light;
+        font: 1.7rem/2.8rem $f-light;
         color: $c-white;
       }
 
       .description {
-        font: 1.6rem/3rem $f-light;
+        font: 1.7rem/3rem $f-light;
         color: $c-gray-200;
+        letter-spacing: 1px;
         margin-top: 1rem;
 
         .read-more {
-          font: 1.6rem/3rem $f-semibold;
+          font: 1.7rem/3rem $f-semibold;
           color: $c-yellow-150;
           text-decoration: underline;
         }
@@ -35,8 +37,9 @@
 
     .social-links {
       .title {
-        font: 1.6rem/2.7rem $f-light;
+        font: 1.7rem/2.7rem $f-light;
         color: $c-white;
+        letter-spacing: 1px;
         margin-left: 2.5rem;
       }
 
@@ -65,17 +68,19 @@
     .footer-detail {
       .credits,
       .registered {
-        font: 1.6rem/2.7rem $f-light;
+        font: 1.7rem/2.7rem $f-light;
         color: $c-white;
         list-style: none;
+        letter-spacing: 1px;
       }
 
       .terms a,
       .privacy a,
       .blog a {
-        font: 1.6rem/3.2rem $f-light;
+        font: 1.7rem/3.2rem $f-light;
         color: $c-white;
         list-style: none;
+        letter-spacing: 1px;
 
         &:hover {
           color: $c-yellow;

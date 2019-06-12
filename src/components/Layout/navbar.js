@@ -40,11 +40,13 @@ class Navbar extends Component {
   showOverlay = () => {
     var overlay = document.getElementById('nav-overlay');
     overlay.classList.add('show-overlay');
+    document.body.classList.add('scroll-disabled');
   };
 
   hideOverlay = () => {
     var overlay = document.getElementById('nav-overlay');
     overlay.classList.remove('show-overlay');
+    document.body.classList.remove('scroll-disabled');
   };
 
   toggleDropdown = () => {
@@ -75,7 +77,13 @@ class Navbar extends Component {
     return (
       <nav className='nav'>
         <div className='nav-menu'>
-          <div className='w-container'>
+          <div
+            className='w-container'
+            data-aos='fade'
+            data-aos-easing='ease'
+            data-aos-duration='700'
+            data-aos-delay='100'
+          >
             <Link to='/'>
               <img
                 src={phdLogo}
@@ -289,8 +297,14 @@ class Navbar extends Component {
             </li>
           </ul>
         </div>
-        <div className='w-container'>
-          <div className='call-btn'>
+        <div className='menu-section w-container'>
+          <div
+            className='call-btn'
+            data-aos='fade'
+            data-aos-easing='ease'
+            data-aos-duration='700'
+            data-aos-delay='100'
+          >
             <CallBtn />
           </div>
           <img
@@ -300,6 +314,10 @@ class Navbar extends Component {
             className='menu-btn'
             id='menu-btn'
             role='menu'
+            data-aos='fade'
+            data-aos-easing='ease'
+            data-aos-duration='700'
+            data-aos-delay='100'
           />
         </div>
       </nav>

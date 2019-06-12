@@ -5,10 +5,17 @@ import '../styles/get-in-touch.scss';
 
 const GetInTouch = () => (
   <section className='stripe-tile-background'>
-    <div className='get-in-touch w-container'>
+    <div
+      className='get-in-touch w-container'
+      data-aos='fade-up'
+      data-aos-easing='ease'
+      data-aos-duration='1000'
+      data-aos-delay='300'
+      data-aos-once='true'
+    >
       <div>
         <h2 className='title'>
-          Cant find what your looking for? We can source most equipment.
+          Cant find what your looking for? We can source most equipment
         </h2>
         <Link to='/contact' className='get-in-touch-link' role='button'>
           Get in touch

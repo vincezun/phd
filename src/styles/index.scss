@@ -1,5 +1,9 @@
 @import '_colors.scss';
 @import '_typography.scss';
+@import '_mixins.scss';
+
+$aos-distance: 20px;
+@import 'node_modules/aos/src/sass/aos.scss';
 
 .home-wrapper {
   section:first-child {
@@ -14,24 +18,58 @@
 
     .w-container {
       padding: 15rem 3rem 5rem;
+
+      @include breakpoint(sm-screen) {
+        padding: 20rem 16% 7.5rem;
+      }
+
+      @include breakpoint(md-lg-screen) {
+        padding: 27rem 3rem 7.5rem;
+      }
     }
 
     .hero-section {
       text-align: center;
 
+      @include breakpoint(md-lg-screen) {
+        display: grid;
+        grid-template-rows: auto;
+        justify-items: center;
+      }
+
       h1 {
         font: 3rem/3.6rem $f-bold;
         color: $c-white;
+
+        @include breakpoint(sm-screen) {
+          font: 4rem/5rem $f-bold;
+        }
+
+        @include breakpoint(md-lg-screen) {
+          font: 6.8rem/7.8rem $f-bold;
+          width: 708px;
+          letter-spacing: 2px;
+        }
       }
 
       p {
         font: 1.6rem/3rem $f-light;
         color: $c-gray-200;
         margin-top: 1.5rem;
+
+        @include breakpoint(md-lg-screen) {
+          width: 546px;
+        }
       }
 
       .arrow-down-yellow {
         display: none;
+
+        @include breakpoint(md-lg-screen) {
+          display: block;
+          width: 14px;
+          margin-top: 4rem;
+        }
       }
     }
   }
@@ -44,38 +82,255 @@
       display: grid;
       grid-template-columns: 1fr 10px;
       align-items: center;
+
+      @include breakpoint(md-lg-screen) {
+        grid-template-rows: 208px;
+        align-items: flex-end;
+      }
     }
 
     .main-section {
-      .white-circle,
-      .white-tile-vertical,
-      .white-tile-horizontal,
-      .forklift,
-      .scissor-lift {
+      @include breakpoint(md-sm-screen) {
+        display: grid;
+        justify-content: center;
+        padding: 8rem 3rem 0;
+      }
+
+      .title {
         display: none;
+
+        @include breakpoint(md-lg-screen) {
+          display: block;
+          font: 1.6rem/2.8rem $f-bold;
+          color: $c-yellow;
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+        }
       }
 
       .services-overviews {
         background-color: $c-yellow;
         padding: 2.5rem 0;
 
-        &:nth-last-of-type(-n + 3) {
-          margin-top: 0.5rem;
+        @include breakpoint(md-sm-screen) {
+          width: 728px;
         }
 
-        .title {
-          font: 1.6rem/3.2rem $f-bold;
-          color: $c-black;
+        @include breakpoint(md-lg-screen) {
+          width: 100%;
+        }
+      }
+
+      /* shared properties in services-overviews */
+      %shared-margin {
+        margin-top: 0.5rem;
+
+        @include breakpoint(md-lg-screen) {
+          margin-top: 0;
+        }
+      }
+
+      %shared-circle-width {
+        width: 207px;
+      }
+
+      %shared-display {
+        display: none;
+
+        @include breakpoint(md-lg-screen) {
+          display: block;
+          position: absolute;
+        }
+      }
+
+      %shared-sub-title {
+        font: 1.6rem/3.2rem $f-bold;
+        color: $c-black;
+      }
+
+      /* sevices-overviews */
+      .row-1 {
+        @include breakpoint(md-lg-screen) {
+          display: grid;
+          grid-template-columns: 458px 239px;
+          grid-column-gap: 1rem;
+          grid-template-rows: 249px;
+          justify-content: center;
         }
 
-        .arrow-right-yellow,
-        .arrow-right-black {
-          background-image: url('../images/arrow-right-black.png');
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center center;
-          width: 10px;
-          height: 19px;
+        .plant-hire {
+          overflow: hidden;
+
+          @include breakpoint(md-lg-screen) {
+            background-color: transparent;
+            background-image: linear-gradient(135deg, #101010, #1b1b1b 100%);
+          }
+
+          .sub-title {
+            @extend %shared-sub-title;
+
+            @include breakpoint(md-lg-screen) {
+              color: $c-yellow;
+            }
+          }
+
+          .arrow-right {
+            background-image: url('../images/arrow-right-black.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 10px;
+            height: 19px;
+
+            @include breakpoint(md-lg-screen) {
+              background-image: url('../images/arrow-right-yellow.png');
+              margin-bottom: 0.75rem;
+            }
+          }
+
+          .white-circle,
+          .white-tile-vertical {
+            @extend %shared-display;
+          }
+
+          .white-circle {
+            @extend %shared-circle-width;
+            top: -10.5rem;
+            left: 10rem;
+          }
+
+          .white-tile-vertical {
+            width: 62px;
+            right: 11rem;
+            bottom: -8.5rem;
+          }
+        }
+
+        .working-platforms {
+          @extend %shared-margin;
+          overflow: hidden;
+
+          @include breakpoint(md-lg-screen) {
+          }
+
+          .sub-title {
+            @extend %shared-sub-title;
+          }
+
+          .arrow-right {
+            background-image: url('../images/arrow-right-black.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 10px;
+            height: 19px;
+
+            @include breakpoint(md-lg-screen) {
+              margin-bottom: 0.75rem;
+            }
+          }
+
+          .scissor-lift {
+            @extend %shared-display;
+            width: 292px;
+            right: -1.5rem;
+            bottom: 4rem;
+          }
+        }
+      }
+
+      .row-2 {
+        @include breakpoint(md-lg-screen) {
+          display: grid;
+          grid-template-columns: 239px 458px;
+          grid-column-gap: 1rem;
+          grid-template-rows: 249px;
+          justify-content: center;
+          margin-top: 1rem;
+        }
+
+        .specialities {
+          @extend %shared-margin;
+          overflow: hidden;
+
+          .sub-title {
+            @extend %shared-sub-title;
+          }
+
+          .arrow-right {
+            background-image: url('../images/arrow-right-black.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 10px;
+            height: 19px;
+
+            @include breakpoint(md-lg-screen) {
+              margin-bottom: 0.75rem;
+            }
+          }
+
+          .forklift {
+            @extend %shared-display;
+            height: 160px;
+            right: 0;
+            bottom: 5rem;
+          }
+        }
+
+        .tool-hire {
+          @extend %shared-margin;
+          overflow: hidden;
+
+          @include breakpoint(md-lg-screen) {
+            background-color: transparent;
+            background-image: linear-gradient(135deg, #101010, #1b1b1b 100%);
+          }
+
+          .sub-title {
+            @extend %shared-sub-title;
+
+            @include breakpoint(md-lg-screen) {
+              color: $c-yellow;
+            }
+          }
+
+          .arrow-right {
+            background-image: url('../images/arrow-right-black.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 10px;
+            height: 19px;
+
+            @include breakpoint(md-lg-screen) {
+              background-image: url('../images/arrow-right-yellow.png');
+              margin-bottom: 0.75rem;
+            }
+          }
+
+          .white-circle,
+          .white-tile-horizontal {
+            @extend %shared-display;
+          }
+
+          .white-circle {
+            @extend %shared-circle-width;
+
+            @include breakpoint(md-lg-screen) {
+              bottom: -10.5rem;
+              right: 11rem;
+            }
+          }
+
+          .white-tile-horizontal {
+            width: 200px;
+
+            @include breakpoint(md-lg-screen) {
+              top: 4.5rem;
+              right: -7rem;
+            }
+          }
         }
       }
     }
@@ -85,44 +340,123 @@
     background-color: $c-white;
 
     .w-container {
-      padding: 7rem 3rem 5rem;
+      padding: 7.5rem 3rem;
+
+      @include breakpoint(sm-screen) {
+        padding: 7.5rem 3rem 0;
+      }
     }
 
     .account-managers-section {
       text-align: center;
 
+      @include breakpoint(md-lg-screen) {
+        display: grid;
+        grid-template-columns: 199px 199px 199px;
+        grid-template-areas:
+          'title title title'
+          'problem solution delivery'
+          'account-managers account-managers account-managers';
+        grid-column-gap: 5.5rem;
+        justify-content: center;
+        text-align: left;
+      }
+
       .title {
         font: 2.8rem/3.2rem $f-bold;
         color: $c-black;
+
+        @include breakpoint(sm-screen) {
+          font: 4.2rem/4.6rem $f-bold;
+        }
+
+        @include breakpoint(md-lg-screen) {
+          grid-area: title;
+          text-align: center;
+        }
+      }
+
+      .problem {
+        @include breakpoint(md-lg-screen) {
+          grid-area: problem;
+        }
+      }
+
+      .solution {
+        @include breakpoint(md-lg-screen) {
+          grid-area: solution;
+        }
+      }
+
+      .delivery {
+        @include breakpoint(md-lg-screen) {
+          grid-area: delivery;
+        }
       }
 
       .dedicated-am {
         margin-top: 4.5rem;
 
-        .am-one,
-        .am-three {
-          width: 28px;
+        @include breakpoint(sm-screen) {
+          margin-top: 6rem;
+          padding: 0 7rem;
         }
 
-        .am-two {
-          width: 19px;
+        @include breakpoint(md-lg-screen) {
+          padding: 0;
         }
 
-        .title {
-          font: 2.6rem/3.2rem $f-bold;
-          color: $c-black;
-          margin-top: 1rem;
+        .w-title {
+          @include breakpoint(md-lg-screen) {
+            display: grid;
+            grid-template-columns: 28px 1fr;
+            grid-column-gap: 2rem;
+            align-items: center;
+          }
+
+          .sub-title {
+            font: 2.6rem/3.2rem $f-bold;
+            color: $c-black;
+            margin-top: 1rem;
+
+            @include breakpoint(md-lg-screen) {
+              margin-top: 0;
+            }
+          }
+
+          .am-one,
+          .am-three {
+            width: 28px;
+          }
+
+          .am-two {
+            width: 19px;
+          }
         }
 
         .description {
           font: 1.6rem/3rem $f-light;
           color: $c-gray-200;
           margin-top: 1rem;
+
+          @include breakpoint(md-lg-screen) {
+            margin-top: 2rem;
+          }
         }
       }
 
       .account-managers {
         display: none;
+
+        @include breakpoint(sm-screen) {
+          display: block;
+          width: 100%;
+          margin-top: 6rem;
+        }
+
+        @include breakpoint(md-lg-screen) {
+          grid-area: account-managers;
+        }
       }
     }
   }

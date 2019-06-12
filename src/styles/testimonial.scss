@@ -1,11 +1,16 @@
 @import '_colors.scss';
 @import '_typography.scss';
+@import '_mixins.scss';
 
 .yellow-background {
   background-color: $c-yellow-500;
 
   .w-container {
     padding: 7.5rem 3rem;
+
+    @include breakpoint(sm-screen) {
+      padding: 10rem 6rem;
+    }
   }
 
   .testimonial {
@@ -16,6 +21,11 @@
       font-weight: 600;
       color: $c-black;
       letter-spacing: 2px;
+
+      @include breakpoint(sm-screen) {
+        font: 4rem/4.6rem $f-semibold-it;
+        font-weight: 600;
+      }
     }
 
     .client {
