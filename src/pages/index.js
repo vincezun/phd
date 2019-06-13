@@ -58,7 +58,16 @@ const Home = () => (
       </section>
       <section>
         <div className='main-section'>
-          <p className='title'>OUR SERVICES</p>
+          <p
+            className='title'
+            data-aos='fade'
+            data-aos-easing='ease'
+            data-aos-duration='1000'
+            data-aos-delay='300'
+            data-aos-once='true'
+          >
+            OUR SERVICES
+          </p>
           <div className='row-1'>
             <figure
               className='plant-hire services-overviews'
@@ -177,7 +186,17 @@ const Home = () => (
       <section>
         <div className='account-managers-section w-container'>
           <p
-            className='title'
+            className='sub-heading'
+            data-aos='fade'
+            data-aos-easing='ease'
+            data-aos-duration='1000'
+            data-aos-delay='300'
+            data-aos-once='true'
+          >
+            HOW WE WORK
+          </p>
+          <p
+            className='heading'
             data-aos='fade-up'
             data-aos-easing='ease'
             data-aos-duration='1000'
@@ -200,7 +219,7 @@ const Home = () => (
                 alt='Account Manager icon one'
                 className='am-one'
               />
-              <figcaption className='sub-title'>Problem</figcaption>
+              <figcaption className='title'>Problem</figcaption>
             </div>
             <p className='description'>
               Donec sed odio duum sociis natoque penatibus et magnis dis
@@ -221,7 +240,7 @@ const Home = () => (
                 alt='Account Manager icon two'
                 className='am-two'
               />
-              <figcaption className='sub-title'>Solution</figcaption>
+              <figcaption className='title'>Solution</figcaption>
             </div>
             <p className='description'>
               Donec sed odio duum sociis natoque penatibus et magnis dis
@@ -242,7 +261,7 @@ const Home = () => (
                 alt='Account Manager icon three'
                 className='am-three'
               />
-              <figcaption className='sub-title'>Delivery</figcaption>
+              <figcaption className='title'>Delivery</figcaption>
             </div>
             <p className='description'>
               Donec sed odio duum sociis natoque penatibus et magnis dis
