@@ -7,28 +7,51 @@
   background-image: linear-gradient(180deg, $c-gray-900, $c-gray-900);
 
   .w-container {
-    padding: 4rem 3rem;
+    padding: 40px 30px;
+
+    @include breakpoint(lg-screen) {
+      padding: 62px 30px;
+    }
   }
 
   .footer-links {
+    @include breakpoint(md-lg-screen) {
+      display: grid;
+      grid-template-columns: 126px 314px 172px;
+      grid-column-gap: 48px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    @include breakpoint(lg-screen) {
+      grid-template-columns: 126px 395px 172px;
+      grid-column-gap: 120px;
+    }
+
     .phd-logo {
       display: none;
+
+      @include breakpoint(md-lg-screen) {
+        display: block;
+        width: 125px;
+        margin-top: 8px;
+      }
     }
 
     .about-us {
       .title {
-        font: 1.7rem/2.8rem $f-light;
+        font: 1.7rem/28px $f-light;
         color: $c-white;
       }
 
       .description {
-        font: 1.7rem/3rem $f-light;
+        font: 1.7rem/30px $f-light;
         color: $c-gray-200;
         letter-spacing: 1px;
-        margin-top: 1rem;
+        margin-top: 10px;
 
         .read-more {
-          font: 1.7rem/3rem $f-semibold;
+          font: 1.7rem/30px $f-semibold;
           color: $c-yellow-150;
           text-decoration: underline;
         }
@@ -37,10 +60,10 @@
 
     .social-links {
       .title {
-        font: 1.7rem/2.7rem $f-light;
+        font: 1.7rem/27px $f-light;
         color: $c-white;
         letter-spacing: 1px;
-        margin-left: 2.5rem;
+        margin-left: 25px;
       }
 
       .twitter-link,
@@ -52,12 +75,16 @@
       }
 
       .twitter-link {
-        margin-top: 3rem;
+        margin-top: 30px;
+
+        @include breakpoint(md-lg-screen) {
+          margin-top: 0;
+        }
       }
 
       .facebook-link,
       .instagram-link {
-        margin-top: 1rem;
+        margin-top: 10px;
       }
     }
   }
@@ -65,31 +92,72 @@
   .footer-bar {
     border-top: 1px solid hsla(0, 0%, 100%, 0.1);
 
+    @include breakpoint(md-lg-screen) {
+      text-align: center;
+    }
+
+    .w-container {
+      @include breakpoint(lg-screen) {
+        padding: 27px 30px;
+      }
+    }
+
     .footer-detail {
+      list-style: none;
+
+      @include breakpoint(lg-screen) {
+        display: grid;
+        grid-template-columns: 220px 368px 145px 90px 30px;
+        grid-column-gap: 20px;
+        justify-content: center;
+      }
+
       .credits,
       .registered {
-        font: 1.7rem/2.7rem $f-light;
+        font: 1.7rem/27px $f-light;
         color: $c-white;
-        list-style: none;
         letter-spacing: 1px;
+
+        @include breakpoint(lg-screen) {
+          font: 1.2rem/22px $f-light;
+        }
       }
 
       .terms a,
       .privacy a,
       .blog a {
-        font: 1.7rem/3.2rem $f-light;
+        font: 1.7rem/32px $f-light;
         color: $c-white;
-        list-style: none;
         letter-spacing: 1px;
 
         &:hover {
           color: $c-yellow;
         }
+
+        @include breakpoint(lg-screen) {
+          font: 1.2rem/22px $f-light;
+        }
       }
 
       .registered,
       .terms {
-        margin-top: 3rem;
+        margin-top: 30px;
+
+        @include breakpoint(lg-screen) {
+          margin-top: 0;
+        }
+      }
+
+      .credits {
+        @include breakpoint(lg-screen) {
+          margin-right: 50px;
+        }
+      }
+
+      .registered {
+        @include breakpoint(lg-screen) {
+          margin-right: 168px;
+        }
       }
     }
   }

@@ -6,10 +6,10 @@
   background-color: $c-yellow-500;
 
   .w-container {
-    padding: 7.5rem 3rem;
+    padding: 75px 30px;
 
     @include breakpoint(sm-screen) {
-      padding: 10rem 6rem;
+      padding: 100px 12.5%;
     }
   }
 
@@ -17,21 +17,30 @@
     text-align: center;
 
     .quote {
-      font: 2.8rem/3.2rem $f-semibold-it;
+      font: 2.8rem/32px $f-semibold-it;
       font-weight: 600;
-      color: $c-black;
+      color: $c-gray-850;
       letter-spacing: 2px;
 
       @include breakpoint(sm-screen) {
-        font: 4rem/4.6rem $f-semibold-it;
+        font: 4rem/46px $f-semibold-it;
         font-weight: 600;
+      }
+
+      @include breakpoint(md-sm-screen) {
+        width: 546px;
+        margin: auto;
+      }
+
+      @include breakpoint(lg-screen) {
+        width: 690px;
       }
     }
 
     .client {
-      font: 1.6rem/2.7rem $f-regular;
+      font: 1.6rem/27px $f-regular;
       color: $c-black;
-      margin-top: 3rem;
+      margin-top: 30px;
       text-transform: uppercase;
     }
   }

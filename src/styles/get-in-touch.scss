@@ -3,22 +3,27 @@
 @import '_mixins.scss';
 
 .stripe-tile-background {
+  background-color: $c-gray-850;
   background-image: linear-gradient(180deg, #0b0b0b, transparent 100%),
     linear-gradient(rgba(11, 11, 11, 0.5)), url('../images/stripe-tile.png');
-  background-color: $c-black;
+
   background-position: center center;
   background-size: 100px;
   background-repeat: repeat;
 
   .w-container {
-    padding: 7.5rem 3rem;
+    padding: 75px 30px;
 
     @include breakpoint(sm-screen) {
-      padding: 7.5rem 18%;
+      padding: 75px 18%;
     }
 
     @include breakpoint(md-lg-screen) {
-      padding: 7.5rem 3rem;
+      padding: 75px 30px;
+    }
+
+    @include breakpoint(lg-screen) {
+      padding: 120px 30px;
     }
   }
 
@@ -28,21 +33,26 @@
     @include breakpoint(md-lg-screen) {
       display: grid;
       grid-template-columns: 341px 344px;
-      grid-column-gap: 2.5rem;
+      grid-column-gap: 25px;
       justify-content: center;
       align-items: center;
     }
 
+    @include breakpoint(lg-screen) {
+      grid-template-columns: 440px 425px;
+      grid-column-gap: 68px;
+    }
+
     .title,
     .get-in-touch-link {
-      font: 2.6rem/3.2rem $f-bold;
+      font: 2.6rem/32px $f-bold;
 
       @include breakpoint(sm-screen) {
-        font: 2.8rem/3.4rem $f-bold;
+        font: 2.8rem/34px $f-bold;
       }
 
       @include breakpoint(md-lg-screen) {
-        font: 4rem/5rem $f-bold;
+        font: 4rem/50px $f-bold;
         text-align: left;
       }
     }
@@ -56,12 +66,12 @@
       text-decoration: underline;
 
       @include breakpoint(md-lg-screen) {
-        margin-left: -11.3rem;
+        float: left;
       }
     }
 
     .description {
-      font: 1.6rem/2.7rem $f-light;
+      font: 1.6rem/27px $f-light;
       color: $c-gray-200;
       margin-top: 3rem;
 

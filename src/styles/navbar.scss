@@ -5,6 +5,7 @@
 .nav {
   position: absolute;
   width: 100%;
+  overflow: hidden;
   background-image: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.6),
@@ -17,11 +18,21 @@
     justify-content: center;
   }
 
+  @include breakpoint(lg-screen) {
+    display: block;
+  }
+
   .w-container {
-    padding: 3rem 3rem;
+    padding: 30px 30px;
   }
 
   .nav-menu {
+    @include breakpoint(lg-screen) {
+      display: grid;
+      grid-template-columns: 290px 700px;
+      justify-content: center;
+    }
+
     .phd-logo {
       width: 75px;
 
@@ -31,6 +42,10 @@
 
       @include breakpoint(md-lg-screen) {
         width: 150px;
+      }
+
+      @include breakpoint(lg-screen) {
+        width: 200px;
       }
     }
   }
@@ -47,11 +62,39 @@
     width: 100%;
     transition: 350ms ease;
     transform: translate3d(100%, 0, 0);
-    padding: 3rem 2rem;
+    padding: 30px 20px;
     text-align: right;
 
     &.show-overlay {
       transform: translate3d(0, 0, 0);
+    }
+
+    &.transition-disabled {
+      transition: none;
+    }
+
+    @include breakpoint(lg-screen) {
+      transform: translate3d(0, 0, 0);
+      background-color: transparent;
+      position: relative;
+      margin: 0;
+      width: 700px;
+      padding: 30px 30px 30px 0;
+      z-index: 0;
+    }
+
+    .w-nav-overlay {
+      @include breakpoint(md-lg-screen) {
+        display: grid;
+        grid-template-columns: 728px;
+        justify-content: center;
+      }
+
+      @include breakpoint(lg-screen) {
+        grid-template-columns: 82px 105px 80px 62px 64px 140px;
+        grid-column-gap: 25px;
+        justify-content: flex-end;
+      }
     }
 
     .dropdown-toggle {
@@ -60,28 +103,58 @@
 
       .dropdown-menu {
         display: grid;
-        grid-template-columns: 90px 10px;
+        grid-template-columns: 78px 10px;
         align-items: center;
 
-        .arrow-down-black {
-          width: 10px;
+        @include breakpoint(sm-screen) {
+          grid-template-columns: 108px 12px;
         }
 
-        @include breakpoint(sm-screen) {
-          grid-template-columns: 110px 12px;
+        @include breakpoint(lg-screen) {
+          grid-template-columns: 70px 10px;
+        }
 
-          .arrow-down-black {
+        .arrow-down-black {
+          background-image: url('../images/arrow-down-black.png');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 10px;
+          height: 7px;
+
+          @include breakpoint(sm-screen) {
             width: 12px;
+            height: 8px;
+            margin-top: 4px;
+          }
+
+          @include breakpoint(lg-screen) {
+            background-image: url('../images/arrow-down-white.png');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 10px;
+            height: 7px;
+            margin-top: 0;
+            opacity: 0.7;
           }
         }
       }
 
       .dropdown-link {
         display: none;
-        margin-top: 1rem;
+        margin-top: 10px;
 
         li {
-          padding: 0.5rem 0;
+          padding: 5px 0;
+
+          @include breakpoint(sm-screen) {
+            padding: 8px 0;
+          }
+
+          @include breakpoint(lg-screen) {
+            width: 130px;
+          }
 
           a {
             font-size: 1.2rem;
@@ -89,13 +162,22 @@
             &.active-link {
               color: $c-white;
             }
-          }
 
-          @include breakpoint(sm-screen) {
-            padding: 0.8rem 0;
+            &:hover {
+              @include breakpoint(lg-screen) {
+                opacity: 0.7;
+                transition: none;
+              }
+            }
 
-            a {
+            @include breakpoint(sm-screen) {
               font-size: 1.6rem;
+            }
+
+            @include breakpoint(lg-screen) {
+              font-size: 1.3rem;
+              color: $c-yellow;
+              opacity: 1;
             }
           }
         }
@@ -104,37 +186,56 @@
       &.show-dropdown-link {
         .dropdown-link {
           display: block;
+
+          @include breakpoint(lg-screen) {
+            position: absolute;
+          }
         }
       }
     }
 
-    .close-btn {
+    .close-btn-black {
       width: 25px;
-      filter: invert(1);
-      margin-bottom: 2rem;
-      margin-right: 0.8rem;
+      margin-bottom: 20px;
+      margin-right: 8px;
       cursor: pointer;
+      user-select: none;
 
       @include breakpoint(sm-screen) {
         width: 32px;
+      }
+
+      @include breakpoint(md-lg-screen) {
+        margin-left: auto;
+        position: relative;
+      }
+
+      @include breakpoint(lg-screen) {
+        display: none;
       }
     }
 
     li {
       list-style: none;
-      padding: 1.4rem 0;
+      padding: 14px 0;
       text-align: left;
 
       a,
       p {
-        font: 1.7rem/2rem $f-semibold;
+        font: 1.7rem/20px $f-semibold;
         letter-spacing: 1px;
         color: $c-black;
         display: block;
         user-select: none;
 
         @include breakpoint(sm-screen) {
-          font: 2.4rem/2.4rem $f-semibold;
+          font: 2.4rem/30px $f-semibold;
+        }
+
+        @include breakpoint(lg-screen) {
+          font: 1.5rem/20px $f-semibold;
+          color: $c-white;
+          opacity: 0.7;
         }
       }
 
@@ -143,12 +244,30 @@
       }
 
       @include breakpoint(sm-screen) {
-        padding: 2rem 0;
+        padding: 20px 0;
+      }
+
+      @include breakpoint(lg-screen) {
+        padding: 0;
+
+        &:hover {
+          a,
+          p,
+          .dropdown-menu .arrow-down-black {
+            opacity: 1;
+            transition: 450ms ease;
+          }
+        }
       }
     }
 
     .request-callback-link {
       cursor: pointer;
+
+      @include breakpoint(lg-screen) {
+        color: $c-yellow;
+        opacity: 1;
+      }
     }
   }
 
@@ -157,13 +276,17 @@
       display: grid;
       grid-template-columns: 100px 30px;
       justify-content: flex-end;
-      grid-column-gap: 3rem;
+      grid-column-gap: 30px;
+    }
+
+    @include breakpoint(lg-screen) {
+      display: none;
     }
 
     .menu-btn {
       position: absolute;
-      top: 3.5rem;
-      right: 3rem;
+      top: 35px;
+      right: 30px;
       width: 20px;
       cursor: pointer;
 
@@ -173,18 +296,18 @@
 
       @include breakpoint(md-lg-screen) {
         position: relative;
-        top: 0.5rem;
+        top: 5px;
         right: 0;
       }
     }
 
     .call-btn {
       position: absolute;
-      top: 3rem;
-      right: 7rem;
+      top: 30px;
+      right: 70px;
 
       @include breakpoint(sm-screen) {
-        right: 9rem;
+        right: 90px;
       }
 
       @include breakpoint(md-lg-screen) {
@@ -205,8 +328,9 @@
   transform: translate(-50%, -50%);
   background-color: $c-black;
   border: none;
-  padding: 3rem 3rem;
+  padding: 30px 30px;
   width: 90%;
+  box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.5);
 
   &:focus {
     outline: none;
@@ -226,27 +350,31 @@
     }
   }
 
+  @include breakpoint(lg-screen) {
+    width: 496px;
+  }
+
   .callback-form {
     .callback-heading {
-      font: 2.8rem/3.3rem $f-bold;
+      font: 2.8rem/33px $f-bold;
       color: $c-white;
       text-align: center;
-      margin-top: 4rem;
+      margin-top: 40px;
 
       @include breakpoint(sm-screen) {
-        font: 4.2rem/4.7rem $f-bold;
+        font: 4.2rem/47px $f-bold;
       }
     }
 
     %message-shared {
-      font: 1.6rem/2.5rem $f-regular;
+      font: 1.6rem/25px $f-regular;
     }
 
     .callback-description {
       @extend %message-shared;
       color: $c-gray-200;
       text-align: center;
-      margin-top: 1rem;
+      margin-top: 10px;
     }
 
     label {
@@ -257,11 +385,11 @@
 
     .full-name-field,
     .number-field {
-      padding: 0.8rem 1.2rem;
+      padding: 8px 12px;
       width: 100%;
-      margin-top: 0.5rem;
+      margin-top: 5px;
       border: 1px solid transparent;
-      font: 1.6rem/2rem $f-regular;
+      font: 1.6rem/20px $f-regular;
 
       &:focus {
         outline: none;
@@ -270,10 +398,10 @@
 
     .w-full-name,
     .w-phone-number {
-      margin-top: 2rem;
+      margin-top: 20px;
 
       @include breakpoint(sm-screen) {
-        margin-top: 4rem;
+        margin-top: 40px;
       }
     }
 
@@ -284,10 +412,11 @@
       font: 1.4rem/2rem $f-semibold;
       color: $c-yellow;
       letter-spacing: 1px;
-      padding: 0.9rem 1.5rem;
+      padding: 9px 15px;
       width: 200px;
       display: block;
-      margin: 3rem auto 0;
+      margin: 30px auto 0;
+      cursor: pointer;
     }
 
     .full-name-field.err,
@@ -297,18 +426,18 @@
 
     .err-msg {
       font: 1.4rem $f-regular;
-      margin-top: 1rem;
+      margin-top: 10px;
       color: $c-red;
     }
 
     .success-msg {
       background-color: $c-gray-50;
-      padding: 2rem;
+      padding: 20px;
       display: none;
       margin-top: 4rem;
 
       p {
-        font: 1.6rem/2rem $f-regular;
+        font: 1.6rem/20px $f-regular;
         color: $c-black;
         text-align: center;
       }
@@ -323,6 +452,16 @@
   right: 0;
   bottom: 0;
   background-color: rgba(11, 11, 11, 0.75);
+  opacity: 0;
+  transition: opacity 350ms ease;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
 }
 
 .scroll-disabled {

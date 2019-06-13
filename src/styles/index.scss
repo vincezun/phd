@@ -7,8 +7,12 @@ $aos-distance: 20px;
 
 .home-wrapper {
   section:first-child {
-    background-color: rgba(11, 11, 11, 0.5);
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5)),
+    background-color: rgba(11, 11, 11, 0.33);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.5),
+        transparent 50%
+      ),
       linear-gradient(to top, #0b0b0b 1%, rgba(32, 32, 32, 0.14) 98%),
       url('../images/waveless-strategy.jpg');
     background-repeat: no-repeat;
@@ -17,14 +21,14 @@ $aos-distance: 20px;
     width: 100%;
 
     .w-container {
-      padding: 15rem 3rem 5rem;
+      padding: 150px 30px 50px;
 
       @include breakpoint(sm-screen) {
-        padding: 20rem 16% 7.5rem;
+        padding: 200px 16% 75px;
       }
 
       @include breakpoint(md-lg-screen) {
-        padding: 27rem 3rem 7.5rem;
+        padding: 270px 30px 90px;
       }
     }
 
@@ -38,27 +42,35 @@ $aos-distance: 20px;
       }
 
       h1 {
-        font: 3rem/3.6rem $f-bold;
+        font: 3rem/36px $f-bold;
         color: $c-white;
 
         @include breakpoint(sm-screen) {
-          font: 4rem/5rem $f-bold;
+          font: 4rem/50px $f-bold;
         }
 
         @include breakpoint(md-lg-screen) {
-          font: 6.8rem/7.8rem $f-bold;
+          font: 6.8rem/78px $f-bold;
           width: 708px;
           letter-spacing: 2px;
+        }
+
+        @include breakpoint(lg-screen) {
+          width: 932px;
         }
       }
 
       p {
-        font: 1.6rem/3rem $f-light;
+        font: 1.6rem/30px $f-light;
         color: $c-gray-200;
-        margin-top: 1.5rem;
+        margin-top: 15px;
 
         @include breakpoint(md-lg-screen) {
           width: 546px;
+        }
+
+        @include breakpoint(lg-screen) {
+          width: 705px;
         }
       }
 
@@ -68,24 +80,31 @@ $aos-distance: 20px;
         @include breakpoint(md-lg-screen) {
           display: block;
           width: 14px;
-          margin-top: 4rem;
+          margin-top: 40px;
         }
       }
     }
   }
 
   section:nth-child(2) {
-    background-color: $c-black;
+    background-color: $c-gray-850;
 
     .w-container {
-      padding: 0 3rem;
+      // padding: 0 30px;
       display: grid;
-      grid-template-columns: 1fr 10px;
+      grid-template-columns: 1fr 40px;
       align-items: center;
 
       @include breakpoint(md-lg-screen) {
-        grid-template-rows: 208px;
+        grid-template-columns: 1fr 40px;
+        grid-template-rows: 249px;
         align-items: flex-end;
+        padding: 0;
+        z-index: 2;
+      }
+
+      @include breakpoint(lg-screen) {
+        grid-template-rows: 330px;
       }
     }
 
@@ -93,7 +112,7 @@ $aos-distance: 20px;
       @include breakpoint(md-sm-screen) {
         display: grid;
         justify-content: center;
-        padding: 8rem 3rem 0;
+        padding: 0 30px;
       }
 
       .title {
@@ -101,16 +120,16 @@ $aos-distance: 20px;
 
         @include breakpoint(md-lg-screen) {
           display: block;
-          font: 1.6rem/2.8rem $f-bold;
+          font: 1.6rem/28px $f-bold;
           color: $c-yellow;
           text-transform: uppercase;
-          margin-bottom: 1rem;
+          margin-bottom: 10px;
         }
       }
 
       .services-overviews {
         background-color: $c-yellow;
-        padding: 2.5rem 0;
+        // padding: 25px 0;
 
         @include breakpoint(md-sm-screen) {
           width: 728px;
@@ -118,12 +137,13 @@ $aos-distance: 20px;
 
         @include breakpoint(md-lg-screen) {
           width: 100%;
+          padding: 0;
         }
       }
 
       /* shared properties in services-overviews */
       %shared-margin {
-        margin-top: 0.5rem;
+        margin-top: 5px;
 
         @include breakpoint(md-lg-screen) {
           margin-top: 0;
@@ -140,12 +160,23 @@ $aos-distance: 20px;
         @include breakpoint(md-lg-screen) {
           display: block;
           position: absolute;
+          z-index: -1;
         }
       }
 
       %shared-sub-title {
-        font: 1.6rem/3.2rem $f-bold;
-        color: $c-black;
+        font: 1.6rem/32px $f-bold;
+        color: $c-gray-850;
+        padding: 25px 0 25px 30px;
+
+        @include breakpoint(md-lg-screen) {
+          padding: 0 0 15px 30px;
+        }
+
+        @include breakpoint(lg-screen) {
+          font: 2.6rem/32px $f-bold;
+          padding-bottom: 20px;
+        }
       }
 
       /* sevices-overviews */
@@ -153,9 +184,14 @@ $aos-distance: 20px;
         @include breakpoint(md-lg-screen) {
           display: grid;
           grid-template-columns: 458px 239px;
-          grid-column-gap: 1rem;
+          grid-column-gap: 10px;
           grid-template-rows: 249px;
           justify-content: center;
+        }
+
+        @include breakpoint(lg-screen) {
+          grid-template-columns: 624px 304px;
+          grid-template-rows: 330px;
         }
 
         .plant-hire {
@@ -184,7 +220,11 @@ $aos-distance: 20px;
 
             @include breakpoint(md-lg-screen) {
               background-image: url('../images/arrow-right-yellow.png');
-              margin-bottom: 0.75rem;
+              margin: 0 30px 23px 0;
+            }
+
+            @include breakpoint(lg-screen) {
+              margin-bottom: 27px;
             }
           }
 
@@ -195,14 +235,19 @@ $aos-distance: 20px;
 
           .white-circle {
             @extend %shared-circle-width;
-            top: -10.5rem;
-            left: 10rem;
+            top: -105px;
+            left: 100px;
           }
 
           .white-tile-vertical {
             width: 62px;
-            right: 11rem;
-            bottom: -8.5rem;
+            right: 110px;
+            bottom: -85px;
+
+            @include breakpoint(lg-screen) {
+              right: 140px;
+              bottom: 0;
+            }
           }
         }
 
@@ -226,15 +271,25 @@ $aos-distance: 20px;
             height: 19px;
 
             @include breakpoint(md-lg-screen) {
-              margin-bottom: 0.75rem;
+              margin: 0 30px 23px 0;
+            }
+
+            @include breakpoint(lg-screen) {
+              margin-bottom: 25px;
             }
           }
 
           .scissor-lift {
             @extend %shared-display;
             width: 292px;
-            right: -1.5rem;
-            bottom: 4rem;
+            right: -15px;
+            bottom: 40px;
+
+            @include breakpoint(lg-screen) {
+              width: 360px;
+              right: -5px;
+              bottom: 60px;
+            }
           }
         }
       }
@@ -243,10 +298,15 @@ $aos-distance: 20px;
         @include breakpoint(md-lg-screen) {
           display: grid;
           grid-template-columns: 239px 458px;
-          grid-column-gap: 1rem;
+          grid-column-gap: 10px;
           grid-template-rows: 249px;
           justify-content: center;
-          margin-top: 1rem;
+          margin-top: 10px;
+        }
+
+        @include breakpoint(lg-screen) {
+          grid-template-columns: 304px 624px;
+          grid-template-rows: 330px;
         }
 
         .specialities {
@@ -266,7 +326,11 @@ $aos-distance: 20px;
             height: 19px;
 
             @include breakpoint(md-lg-screen) {
-              margin-bottom: 0.75rem;
+              margin: 0 30px 23px 0;
+            }
+
+            @include breakpoint(lg-screen) {
+              margin-bottom: 25px;
             }
           }
 
@@ -274,7 +338,12 @@ $aos-distance: 20px;
             @extend %shared-display;
             height: 160px;
             right: 0;
-            bottom: 5rem;
+            bottom: 50px;
+
+            @include breakpoint(lg-screen) {
+              height: 210px;
+              bottom: 75px;
+            }
           }
         }
 
@@ -305,7 +374,11 @@ $aos-distance: 20px;
 
             @include breakpoint(md-lg-screen) {
               background-image: url('../images/arrow-right-yellow.png');
-              margin-bottom: 0.75rem;
+              margin: 0 30px 23px 0;
+            }
+
+            @include breakpoint(lg-screen) {
+              margin-bottom: 27px;
             }
           }
 
@@ -316,19 +389,22 @@ $aos-distance: 20px;
 
           .white-circle {
             @extend %shared-circle-width;
+            bottom: -105px;
+            right: 110px;
 
-            @include breakpoint(md-lg-screen) {
-              bottom: -10.5rem;
-              right: 11rem;
+            @include breakpoint(lg-screen) {
+              right: 220px;
             }
           }
 
           .white-tile-horizontal {
             width: 200px;
+            top: 45px;
+            right: -73px;
 
-            @include breakpoint(md-lg-screen) {
-              top: 4.5rem;
-              right: -7rem;
+            @include breakpoint(lg-screen) {
+              top: 80px;
+              right: 60px;
             }
           }
         }
@@ -340,10 +416,14 @@ $aos-distance: 20px;
     background-color: $c-white;
 
     .w-container {
-      padding: 7.5rem 3rem;
+      padding: 75px 30px;
 
       @include breakpoint(sm-screen) {
-        padding: 7.5rem 3rem 0;
+        padding: 75px 30px 0;
+      }
+
+      @include breakpoint(lg-screen) {
+        padding: 100px 30px 0;
       }
     }
 
@@ -354,25 +434,48 @@ $aos-distance: 20px;
         display: grid;
         grid-template-columns: 199px 199px 199px;
         grid-template-areas:
-          'title title title'
+          'sub-heading sub-heading sub-heading'
+          'heading heading heading'
           'problem solution delivery'
           'account-managers account-managers account-managers';
-        grid-column-gap: 5.5rem;
+        grid-column-gap: 55px;
         justify-content: center;
         text-align: left;
       }
 
-      .title {
-        font: 2.8rem/3.2rem $f-bold;
+      @include breakpoint(lg-screen) {
+        grid-template-columns: 290px 290px 290px;
+        grid-column-gap: 30px;
+      }
+
+      .sub-heading {
+        display: none;
+
+        @include breakpoint(lg-screen) {
+          display: block;
+          grid-area: sub-heading;
+          font: 1.6rem/28px $f-bold;
+          text-transform: uppercase;
+          color: $c-black;
+          text-align: center;
+        }
+      }
+
+      .heading {
+        font: 2.8rem/32px $f-bold;
         color: $c-black;
 
         @include breakpoint(sm-screen) {
-          font: 4.2rem/4.6rem $f-bold;
+          font: 4.2rem/46px $f-bold;
         }
 
         @include breakpoint(md-lg-screen) {
-          grid-area: title;
+          grid-area: heading;
           text-align: center;
+        }
+
+        @include breakpoint(lg-screen) {
+          margin-top: 25px;
         }
       }
 
@@ -395,11 +498,11 @@ $aos-distance: 20px;
       }
 
       .dedicated-am {
-        margin-top: 4.5rem;
+        margin-top: 45px;
 
         @include breakpoint(sm-screen) {
-          margin-top: 6rem;
-          padding: 0 7rem;
+          margin-top: 60px;
+          padding: 0 70px;
         }
 
         @include breakpoint(md-lg-screen) {
@@ -410,14 +513,14 @@ $aos-distance: 20px;
           @include breakpoint(md-lg-screen) {
             display: grid;
             grid-template-columns: 28px 1fr;
-            grid-column-gap: 2rem;
+            grid-column-gap: 20px;
             align-items: center;
           }
 
-          .sub-title {
-            font: 2.6rem/3.2rem $f-bold;
+          .title {
+            font: 2.6rem/32px $f-bold;
             color: $c-black;
-            margin-top: 1rem;
+            margin-top: 10px;
 
             @include breakpoint(md-lg-screen) {
               margin-top: 0;
@@ -435,12 +538,12 @@ $aos-distance: 20px;
         }
 
         .description {
-          font: 1.6rem/3rem $f-light;
+          font: 1.6rem/30px $f-light;
           color: $c-gray-200;
-          margin-top: 1rem;
+          margin-top: 10px;
 
           @include breakpoint(md-lg-screen) {
-            margin-top: 2rem;
+            margin-top: 20px;
           }
         }
       }
@@ -451,7 +554,7 @@ $aos-distance: 20px;
         @include breakpoint(sm-screen) {
           display: block;
           width: 100%;
-          margin-top: 6rem;
+          margin-top: 60px;
         }
 
         @include breakpoint(md-lg-screen) {
