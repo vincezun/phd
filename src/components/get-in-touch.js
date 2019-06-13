@@ -17,6 +17,7 @@ const GetInTouch = () => (
         <h2 className='title'>
           Cant find what your looking for? We can source most equipment
         </h2>
+        <br />
         <Link to='/contact' className='get-in-touch-link' role='button'>
           Get in touch
         </Link>
