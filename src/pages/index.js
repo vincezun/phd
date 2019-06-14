@@ -53,6 +53,11 @@ const Home = () => (
             src={arrowDownYellow}
             alt='Arrow down yellow'
             className='arrow-down-yellow'
+            data-aos='fade'
+            data-aos-easing='ease'
+            data-aos-duration='1000'
+            data-aos-delay='300'
+            data-aos-once='true'
           />
         </div>
       </section>
