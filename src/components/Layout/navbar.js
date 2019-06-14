@@ -346,7 +346,7 @@ class Navbar extends Component {
             alt='Menu button'
             className='menu-btn'
             id='menu-btn'
-            role='menu'
+            role='button'
             data-aos='fade'
             data-aos-easing='ease'
             data-aos-duration='700'
