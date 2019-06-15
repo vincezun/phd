@@ -6,7 +6,7 @@
   }
 
   @if $breakpoint == md-sm-screen {
-    @media only screen and(min-width: 729px) {
+    @media only screen and(min-width: 707px) {
       @content;
     }
   }
@@ -20,4 +20,43 @@
       @content;
     }
   }
+}
+
+@mixin hero-section-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+}
+
+@mixin hero-heading {
+  font: 3rem/36px $f-bold;
+  color: $c-white;
+  text-align: center;
+}
+
+@mixin hero-description {
+  font: 1.6rem/30px $f-light;
+  color: $c-gray-200;
+  margin-top: 15px;
+  text-align: center;
+}
+
+@mixin hero-container {
+  padding: 150px 30px 50px;
+}
+
+@mixin service-container {
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  align-items: center;
+}
+
+@mixin service-arrow-right {
+  background-image: url('../images/arrow-right-black.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 10px;
+  height: 19px;
 }

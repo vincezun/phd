@@ -15,13 +15,10 @@ $aos-distance: 20px;
       ),
       linear-gradient(to top, #0b0b0b 1%, rgba(32, 32, 32, 0.14) 98%),
       url('../images/waveless-strategy.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    width: 100%;
+    @include hero-section-bg;
 
     .w-container {
-      padding: 150px 30px 50px;
+      @include hero-container;
 
       @include breakpoint(sm-screen) {
         padding: 200px 16% 75px;
@@ -33,17 +30,8 @@ $aos-distance: 20px;
     }
 
     .hero-section {
-      text-align: center;
-
-      @include breakpoint(md-lg-screen) {
-        display: grid;
-        grid-template-rows: auto;
-        justify-items: center;
-      }
-
-      h1 {
-        font: 3rem/36px $f-bold;
-        color: $c-white;
+      .heading {
+        @include hero-heading;
 
         @include breakpoint(sm-screen) {
           font: 4rem/50px $f-bold;
@@ -53,6 +41,7 @@ $aos-distance: 20px;
           font: 6.8rem/78px $f-bold;
           width: 708px;
           letter-spacing: 2px;
+          margin: 0 auto;
         }
 
         @include breakpoint(lg-screen) {
@@ -60,13 +49,12 @@ $aos-distance: 20px;
         }
       }
 
-      p {
-        font: 1.6rem/30px $f-light;
-        color: $c-gray-200;
-        margin-top: 15px;
+      .description {
+        @include hero-description;
 
         @include breakpoint(md-lg-screen) {
           width: 546px;
+          margin: 15px auto 0;
         }
 
         @include breakpoint(lg-screen) {
@@ -80,7 +68,7 @@ $aos-distance: 20px;
         @include breakpoint(md-lg-screen) {
           display: block;
           width: 14px;
-          margin-top: 40px;
+          margin: 40px auto 0;
         }
       }
     }
@@ -90,10 +78,7 @@ $aos-distance: 20px;
     background-color: $c-gray-850;
 
     .w-container {
-      // padding: 0 30px;
-      display: grid;
-      grid-template-columns: 1fr 40px;
-      align-items: center;
+      @include service-container;
 
       @include breakpoint(md-lg-screen) {
         grid-template-columns: 1fr 40px;
@@ -129,10 +114,9 @@ $aos-distance: 20px;
 
       .services-overviews {
         background-color: $c-yellow;
-        // padding: 25px 0;
 
         @include breakpoint(md-sm-screen) {
-          width: 728px;
+          width: 707px;
         }
 
         @include breakpoint(md-lg-screen) {
@@ -211,12 +195,7 @@ $aos-distance: 20px;
           }
 
           .arrow-right {
-            background-image: url('../images/arrow-right-black.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center center;
-            width: 10px;
-            height: 19px;
+            @include service-arrow-right;
 
             @include breakpoint(md-lg-screen) {
               background-image: url('../images/arrow-right-yellow.png');
@@ -263,12 +242,7 @@ $aos-distance: 20px;
           }
 
           .arrow-right {
-            background-image: url('../images/arrow-right-black.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center center;
-            width: 10px;
-            height: 19px;
+            @include service-arrow-right;
 
             @include breakpoint(md-lg-screen) {
               margin: 0 30px 23px 0;
@@ -318,12 +292,7 @@ $aos-distance: 20px;
           }
 
           .arrow-right {
-            background-image: url('../images/arrow-right-black.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center center;
-            width: 10px;
-            height: 19px;
+            @include service-arrow-right;
 
             @include breakpoint(md-lg-screen) {
               margin: 0 30px 23px 0;
@@ -365,12 +334,7 @@ $aos-distance: 20px;
           }
 
           .arrow-right {
-            background-image: url('../images/arrow-right-black.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center center;
-            width: 10px;
-            height: 19px;
+            @include service-arrow-right;
 
             @include breakpoint(md-lg-screen) {
               background-image: url('../images/arrow-right-yellow.png');
