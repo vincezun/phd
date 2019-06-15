@@ -1,0 +1,12 @@
+@import '_colors.scss';
+@import '_typography.scss';
+@import '_mixins.scss';
+
+.breadcrumb-section {
+  display: none;
+
+  @include breakpoint(lg-screen) {
+    display: block;
+    text-align: center;
+  }
+}

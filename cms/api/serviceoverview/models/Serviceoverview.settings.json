@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "serviceoverviews",
+  "info": {
+    "name": "serviceoverview",
+    "description": "Service Overviews"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "Name": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "Introduction-Text": {
+      "type": "text"
+    },
+    "servicelists": {
+      "collection": "servicelist",
+      "via": "serviceoverview"
+    }
+  }
+}

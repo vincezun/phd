@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/servicelists",
+      "handler": "Servicelist.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/servicelists/count",
+      "handler": "Servicelist.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/servicelists/:id",
+      "handler": "Servicelist.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/servicelists",
+      "handler": "Servicelist.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/servicelists/:id",
+      "handler": "Servicelist.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/servicelists/:id",
+      "handler": "Servicelist.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
