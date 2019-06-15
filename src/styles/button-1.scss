@@ -3,7 +3,7 @@
 @import '_mixins.scss';
 
 .button-1 {
-  font: 1rem/2rem $f-semibold;
+  font: 1rem/20px $f-semibold;
   color: $c-yellow-500;
   background-color: transparent;
   border: 2px solid $c-yellow-500;
@@ -11,6 +11,7 @@
   display: inline-block;
   text-align: center;
   border-radius: 225px;
+  letter-spacing: 1px;
 
   &:hover {
     text-decoration: underline;
@@ -18,11 +19,11 @@
 
   @include breakpoint(sm-screen) {
     width: 120px;
-    font: 1.4rem/3rem $f-semibold;
+    font: 1.4rem/30px $f-semibold;
   }
 
   @include breakpoint(md-lg-screen) {
     width: 100px;
-    line-height: 3.5rem;
+    line-height: 35px;
   }
 }

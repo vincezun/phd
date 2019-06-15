@@ -1,19 +1,30 @@
 @import '_colors.scss';
 @import '_typography.scss';
+@import '_mixins.scss';
 
 .button-2 {
-  font-family: $f-semibold;
-  font-size: 1rem;
-  line-height: 2rem;
+  font: 1rem/20px $f-semibold;
   color: $c-yellow-500;
   background-color: transparent;
   border: 2px solid $c-yellow-500;
-  padding: 0.8rem 1.5rem;
-  display: inline-block;
+  width: 99px;
+  display: block;
   text-align: center;
   border-radius: 225px;
+  margin: 20px auto 0;
+  letter-spacing: 1px;
 
   &:hover {
     text-decoration: underline;
+  }
+
+  @include breakpoint(sm-screen) {
+    font: 1.4rem/30px $f-semibold;
+    width: 151px;
+    margin: 30px auto 0;
+  }
+
+  @include breakpoint(md-lg-screen) {
+    line-height: 39px;
   }
 }
