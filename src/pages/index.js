@@ -29,6 +29,7 @@ const Home = () => (
           aria-label='Plant Hire Division Facility'
         >
           <h1
+            className='heading'
             data-aos='fade-down'
             data-aos-easing='ease'
             data-aos-duration='1000'
@@ -38,6 +39,7 @@ const Home = () => (
             Ensuring your project remains up and running
           </h1>
           <p
+            className='description'
             data-aos='fade-up'
             data-aos-easing='ease'
             data-aos-duration='1000'
