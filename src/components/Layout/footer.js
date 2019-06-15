@@ -80,15 +80,16 @@ const Footer = () => (
         </a>
       </div>
     </div>
-    <div
-      className='footer-bar'
-      data-aos='fade'
-      data-aos-easing='ease'
-      data-aos-duration='1000'
-      data-aos-delay='300'
-      data-aos-once='true'
-    >
-      <ul className='footer-detail w-container'>
+    <div className='footer-bar'>
+      <ul
+        className='footer-detail w-container'
+        data-aos='fade'
+        data-aos-easing='ease'
+        data-aos-duration='1000'
+        data-aos-delay='300'
+        data-aos-once='true'
+        data-aos-anchor='.instagram-link'
+      >
         <li className='credits'>© Plant Hire Division 2019</li>
         <li className='registered'>Registered in England: 1471587</li>
         <li className='terms'>
