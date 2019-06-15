@@ -8,6 +8,15 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`
+      }
+    },
     {
       resolve: `gatsby-plugin-sass`,
       options: {
@@ -23,7 +32,7 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: `http://localhost:1337`,
-        contentTypes: [`servicesoverview`],
+        contentTypes: [`serviceoverview`],
         queryLimit: 1000
       }
     }
