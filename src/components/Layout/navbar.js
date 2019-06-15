@@ -41,6 +41,11 @@ class Navbar extends Component {
 
   componentDidMount() {
     window.addEventListener('resize', this.handleResize);
+    document.body.classList.remove(
+      'scroll-disabled'
+    ); /* This removes the scroll disabled class 
+    after the user selects a link in navigation because basically it will only remove when 
+    you click the close button. */
   }
 
   componentWillUnmount() {
@@ -330,7 +335,7 @@ class Navbar extends Component {
             </div>
           </ul>
         </div>
-        <div className='menu-section w-container'>
+        <div className='menu-section'>
           <div
             className='call-btn'
             data-aos='fade'
