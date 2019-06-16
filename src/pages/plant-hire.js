@@ -17,11 +17,29 @@ const PlantHire = ({ data }) => (
     <div className='plant-hire-wrapper'>
       <section>
         <div className='hero-section w-container'>
-          <Breadcrumb link='/plant-hire' name='PLANT HIRE' />
+          <Breadcrumb link='plant-hire' name='PLANT HIRE' />
           {data.allStrapiServiceoverview.edges.map((document, i) => (
             <div key={i}>
-              <h1 className='heading'>{document.node.Name}</h1>
-              <p className='description'>{document.node.Introduction_Text}</p>
+              <h1
+                className='heading'
+                data-aos='fade-down'
+                data-aos-easing='ease'
+                data-aos-duration='1000'
+                data-aos-delay='300'
+                data-aos-once='true'
+              >
+                {document.node.Name}
+              </h1>
+              <p
+                className='description'
+                data-aos='fade-up'
+                data-aos-easing='ease'
+                data-aos-duration='1000'
+                data-aos-delay='300'
+                data-aos-once='true'
+              >
+                {document.node.Introduction_Text}
+              </p>
               <CallUsBtn />
             </div>
           ))}
@@ -32,8 +50,19 @@ const PlantHire = ({ data }) => (
           {data.allStrapiServiceoverview.edges.map((document, i) => (
             <div key={i}>
               {document.node.servicelists.map((document, i) => (
-                <div key={i} className='plant-hire-details'>
-                  <Link to={`/${document.id}`} className='w-container'>
+                <div
+                  key={i}
+                  className='plant-hire-details'
+                  data-aos='fade-up'
+                  data-aos-easing='ease'
+                  data-aos-duration='1000'
+                  data-aos-delay='300'
+                  data-aos-once='true'
+                >
+                  <Link
+                    to={`/plant-hire/${document.Slug}`}
+                    className='w-container'
+                  >
                     <h3 className='service-name'>{document.Name}</h3>
                     <p className='description'>{document.Introduction_Text}</p>
                     <div
@@ -67,7 +96,7 @@ export const query = graphql`
           Name
           Introduction_Text
           servicelists {
-            id
+            Slug
             Name
             Introduction_Text
             Image {
