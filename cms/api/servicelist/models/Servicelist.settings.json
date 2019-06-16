@@ -36,6 +36,11 @@
       "model": "file",
       "via": "related",
       "plugin": "upload"
+    },
+    "Slug": {
+      "unique": true,
+      "required": true,
+      "type": "string"
     }
   }
 }
