@@ -10,17 +10,24 @@ const ServiceDetailTemplate = ({ data }) => (
     <div className='service-detail-wrapper'>
       <section>
         <Breadcrumb
-          link={data.sd.serviceoverview.Slug}
-          name={`\u00A0\u00A0/\u00A0\u00A0${data.sd.serviceoverview.Name}`}
-          subLink={`${data.sd.serviceoverview.Slug}/${data.sd.Slug}`}
-          subName={data.sd.Name}
+          link={data.strapiServicedetail.serviceoverview.slug}
+          name={`\u00A0\u00A0/\u00A0\u00A0${
+            data.strapiServicedetail.serviceoverview.name
+          }`}
+          subLink={`${data.strapiServicedetail.serviceoverview.slug}/${
+            data.strapiServicedetail.slug
+          }`}
+          subName={data.strapiServicedetail.name}
         />
-        <p>{data.sd.serviceoverview.Name}</p>
-        <h1>{data.sd.Name}</h1>
-        {/* <h2>{data.strapiServicedetail.accountmanager.Name}</h2>
-        <p>{data.strapiServicedetail.accountmanager.Bio}</p> */}
-        <p>{data.am.Name}</p>
-        <Img fluid={data.am.Image.childImageSharp.fluid} />
+        <h1>{data.strapiServicedetail.name}</h1>
+
+        {data.strapiServicedetail.accountmanagers.map((document, i) => (
+          <div key={i}>
+            <h2>{document.name}</h2>
+            <h2>{document.bio}</h2>
+            <Img fluid={document.image.childImageSharp.fluid} />
+          </div>
+        ))}
       </section>
     </div>
   </Layout>
@@ -57,31 +64,26 @@ detail many tools. One tool for every service detail. So many to many will apply
 */
 
 export const query = graphql`
-  query ServiceDetailTemplate($Slug: String, $AM: String) {
-    sd: strapiServicedetail(Slug: { eq: $Slug }) {
-      Slug
-      Name
-      Introduction_Text
-      Tool_List_Heading
-      Tool_List_Text
+  query ServiceDetailTemplate($slug: String) {
+    strapiServicedetail(slug: { eq: $slug }) {
+      slug
+      name
+      introductionText
+      toolListHeading
+      toolListText
       serviceoverview {
-        Name
-        Slug
-        Introduction_Text
+        name
+        slug
+        introductionText
       }
-      testimonial {
-        Quote
-        Name
-        Company
-      }
-    }
-    am: strapiAccountmanager(Name: { eq: $AM }) {
-      Name
-      Bio
-      Image {
-        childImageSharp {
-          fluid(maxWidth: 400) {
-            ...GatsbyImageSharpFluid_noBase64
+      accountmanagers {
+        name
+        bio
+        image {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid_noBase64
+            }
           }
         }
       }
