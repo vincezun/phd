@@ -19,14 +19,17 @@ const makeRequest = (graphql, request) =>
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
 
-  const getServiceList = makeRequest(
+  const getServiceDetails = makeRequest(
     graphql,
     `
     {
-      allStrapiServicelist {
+      allStrapiServicedetail {
         edges {
           node {
-            Slug
+            slug
+            serviceoverview {
+              slug
+            }
           }
         }
       }
@@ -34,17 +37,17 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     `
   ).then(result => {
     // Create pages for each article.
-    result.data.allStrapiServicelist.edges.forEach(({ node }) => {
+    result.data.allStrapiServicedetail.edges.forEach(({ node }) => {
       createPage({
-        path: `plant-hire/${node.Slug}`,
-        component: path.resolve(`src/templates/service-list.js`),
+        path: `/${node.serviceoverview.slug}/${node.slug}`,
+        component: path.resolve(`src/templates/service-detail.js`),
         context: {
-          Slug: node.Slug
+          slug: node.slug
         }
       });
     });
   });
 
   // Query for articles nodes to use in creating pages.
-  return getServiceList;
+  return getServiceDetails;
 };
