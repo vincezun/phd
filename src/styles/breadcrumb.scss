@@ -18,30 +18,18 @@
   a {
     font: 1.5rem/20px $f-semibold;
     color: $c-yellow-500;
-    padding: 0 10px;
     display: inline-block;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  li + li::before {
-    content: '\00a0/\00a0';
-    font: 1.5rem/20px $f-semibold;
-    color: $c-yellow-500;
-  }
-
-  li:last-child {
-    display: none;
+    text-transform: uppercase;
   }
 
   .active {
     display: inline-block;
     color: $c-white;
 
-    li:last-child {
-      display: inline-block;
+    &::before {
+      content: '\00A0\00A0/\00A0\00A0';
+      font: 1.5rem/20px $f-semibold;
+      color: $c-white;
     }
   }
 }
