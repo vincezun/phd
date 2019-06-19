@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-import '../styles/plant-hire.scss';
+import '../styles/service-overview.scss';
 
 import Layout from '../components/Layout/layout';
 import Breadcrumb from '../components/Layout/breadcrumb';
@@ -13,72 +13,81 @@ import CallUsBtn from '../components/Button/button-2';
 
 const PlantHire = ({ data }) => (
   <Layout>
-    <SEO title='Plant Hire' />
-    <div className='plant-hire-wrapper'>
+    <div className='service-overview-wrapper'>
       <section>
         <div className='hero-section w-container'>
-          <Breadcrumb link='plant-hire' name='PLANT HIRE' />
-          {data.allStrapiServiceoverview.edges.map((document, i) => (
-            <div key={i}>
-              <h1
-                className='heading'
-                data-aos='fade-down'
-                data-aos-easing='ease'
-                data-aos-duration='1000'
-                data-aos-delay='300'
-                data-aos-once='true'
-              >
-                {document.node.Name}
-              </h1>
-              <p
-                className='description'
-                data-aos='fade-up'
-                data-aos-easing='ease'
-                data-aos-duration='1000'
-                data-aos-delay='300'
-                data-aos-once='true'
-              >
-                {document.node.Introduction_Text}
-              </p>
-              <CallUsBtn />
-            </div>
-          ))}
-        </div>
-      </section>
-      <section>
-        <div>
-          {data.allStrapiServiceoverview.edges.map((document, i) => (
-            <div key={i}>
-              {document.node.servicelists.map((document, i) => (
-                <div
-                  key={i}
-                  className='plant-hire-details'
+          {data.allStrapiServiceoverview.edges.map((document, i) => {
+            const get = document.node;
+            const name = get.name;
+            const slug = get.slug;
+            const introductionText = get.introductionText;
+            return (
+              <div key={i}>
+                <SEO title={name} />
+                <Breadcrumb link={slug} name={name} />
+                <h1
+                  className='heading'
+                  data-aos='fade-down'
+                  data-aos-easing='ease'
+                  data-aos-duration='1000'
+                  data-aos-delay='300'
+                  data-aos-once='true'
+                >
+                  {name}
+                </h1>
+                <p
+                  className='description'
                   data-aos='fade-up'
                   data-aos-easing='ease'
                   data-aos-duration='1000'
                   data-aos-delay='300'
                   data-aos-once='true'
                 >
-                  <Link
-                    to={`/plant-hire/${document.Slug}`}
-                    className='w-container'
-                  >
-                    <h3 className='service-name'>{document.Name}</h3>
-                    <p className='description'>{document.Introduction_Text}</p>
+                  {introductionText}
+                </p>
+                <CallUsBtn />
+              </div>
+            );
+          })}
+        </div>
+      </section>
+      <section>
+        <div>
+          {data.allStrapiServiceoverview.edges.map((document, i) => {
+            const base = document.node.slug;
+            return (
+              <div key={i}>
+                {document.node.servicedetails.map((document, i) => {
+                  const slug = document.slug;
+                  const name = document.name;
+                  const introductionText = document.introductionText;
+                  const image = document.image.childImageSharp.fluid;
+                  return (
                     <div
-                      className='arrow-right'
-                      aria-label='Yellow right arrow button'
-                      role='button'
-                    />
-                  </Link>
-                  <Img
-                    fluid={document.Image.childImageSharp.fluid}
-                    alt={document.Name}
-                  />
-                </div>
-              ))}
-            </div>
-          ))}
+                      key={i}
+                      className='service-details'
+                      data-aos='fade-up'
+                      data-aos-easing='ease'
+                      data-aos-duration='1000'
+                      data-aos-delay='300'
+                      data-aos-once='true'
+                    >
+                      <Link to={`/${base}/${slug}`} className='w-container'>
+                        <h3 className='service-name'>{name}</h3>
+                        <p className='description'>{introductionText}</p>
+                        <div
+                          className='arrow-right'
+                          aria-label='Yellow right arrow button'
+                          role='button'
+                        />
+                      </Link>
+                      <Img fluid={image} alt={name} />
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
         </div>
       </section>
       <GetInTouch />
@@ -89,20 +98,21 @@ const PlantHire = ({ data }) => (
 export default PlantHire;
 
 export const query = graphql`
-  query myQquery {
-    allStrapiServiceoverview(filter: { Name: { eq: "Plant Hire" } }) {
+  query plantHire {
+    allStrapiServiceoverview(filter: { name: { eq: "Plant Hire" } }) {
       edges {
         node {
-          Name
-          Introduction_Text
-          servicelists {
-            Slug
-            Name
-            Introduction_Text
-            Image {
+          slug
+          name
+          introductionText
+          servicedetails {
+            slug
+            name
+            introductionText
+            image {
               childImageSharp {
                 fluid(maxWidth: 480) {
-                  ...GatsbyImageSharpFluid_withWebp_noBase64
+                  ...GatsbyImageSharpFluid_noBase64
                 }
               }
             }

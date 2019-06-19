@@ -18,9 +18,9 @@ const WorkingPlatforms = ({ data }) => (
         <div className='hero-section w-container'>
           {data.allStrapiServiceoverview.edges.map((document, i) => {
             const get = document.node;
-            const name = get.Name;
-            const slug = get.Slug;
-            const introductionText = get.Introduction_Text;
+            const name = get.name;
+            const slug = get.slug;
+            const introductionText = get.introductionText;
             return (
               <div key={i}>
                 <SEO title={name} />
@@ -54,14 +54,14 @@ const WorkingPlatforms = ({ data }) => (
       <section>
         <div>
           {data.allStrapiServiceoverview.edges.map((document, i) => {
-            const base = document.node.Slug;
+            const base = document.node.slug;
             return (
               <div key={i}>
                 {document.node.servicedetails.map((document, i) => {
-                  const slug = document.Slug;
-                  const name = document.Name;
-                  const introductionText = document.Introduction_Text;
-                  const image = document.Image.childImageSharp.fluid;
+                  const slug = document.slug;
+                  const name = document.name;
+                  const introductionText = document.introductionText;
+                  const image = document.image.childImageSharp.fluid;
                   return (
                     <div
                       key={i}
@@ -99,20 +99,20 @@ export default WorkingPlatforms;
 
 export const query = graphql`
   query workingPlatforms {
-    allStrapiServiceoverview(filter: { Name: { eq: "Working Platforms" } }) {
+    allStrapiServiceoverview(filter: { name: { eq: "Working Platforms" } }) {
       edges {
         node {
-          Slug
-          Name
-          Introduction_Text
+          slug
+          name
+          introductionText
           servicedetails {
-            Slug
-            Name
-            Introduction_Text
-            Image {
+            slug
+            name
+            introductionText
+            image {
               childImageSharp {
                 fluid(maxWidth: 480) {
-                  ...GatsbyImageSharpFluid_withWebp_noBase64
+                  ...GatsbyImageSharpFluid_noBase64
                 }
               }
             }
