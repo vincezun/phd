@@ -159,11 +159,11 @@ class Navbar extends Component {
                   </li>
                   <li role='presentation'>
                     <Link
-                      to='/working-platform'
+                      to='/working-platforms'
                       role='treeitem'
                       activeClassName='active-link'
                     >
-                      Working Plantform
+                      Working Platforms
                     </Link>
                   </li>
                   <li role='presentation'>
