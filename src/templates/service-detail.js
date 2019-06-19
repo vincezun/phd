@@ -35,34 +35,6 @@ const ServiceDetailTemplate = ({ data }) => (
 
 export default ServiceDetailTemplate;
 
-/* 
-ACCOUNT MANAGERS
-Account Manager has many Service Details:
-
---The childImageSharp does not show if the content type is a child
-
-So in order to fetch it correctly,
-I used AM context in gatsby node and AM alias in service template to fetch 
-the data of Account Managers based on the slug fetch from the service 
-detail in gatsby node. But it has a bug, idk whats causing it. The bug
-is some of the image of account manager does not show instead the image of
-the service detail appear. Also in service detail, sometimes the image of
-account managers appear.
------------------------------------------------------------------------
-
-Many to Many:
-I cant fetch the data. But this is the correct relationship to fetch the data.
-
-TOOLS 
-Many to Many:
-I cant fetch the data. But this is the correct relationship to fetch the data.
-
-Tool has many Service Details:
-This cant be done because the relationship does not open to have the service
-detail many tools. One tool for every service detail. So many to many will apply.
-
-*/
-
 export const query = graphql`
   query ServiceDetailTemplate($slug: String) {
     strapiServicedetail(slug: { eq: $slug }) {
