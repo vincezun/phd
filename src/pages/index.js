@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/Layout/layout';
 import SEO from '../components/seo';
@@ -18,7 +18,7 @@ import amIcon3 from '../images/am-icon-3.png';
 import accountManagers from '../images/account-managers.png';
 import arrowDownYellow from '../images/arrow-down-yellow.png';
 
-const Home = () => (
+const Home = ({ data }) => (
   <Layout>
     <SEO title='Home' />
     <div className='home-wrapper'>
@@ -287,9 +287,31 @@ const Home = () => (
           />
         </div>
       </section>
-      <Testimonial />
+      {data.allStrapiTestimonial.edges.map((document, i) => {
+        const get = document.node;
+        const quote = get.quote;
+        const name = get.name;
+        const company = get.company;
+        return (
+          <Testimonial key={i} quote={quote} client={name} company={company} />
+        );
+      })}
     </div>
   </Layout>
 );
 
 export default Home;
+
+export const query = graphql`
+  query testimonial {
+    allStrapiTestimonial(filter: { name: { eq: "A. Customer" } }) {
+      edges {
+        node {
+          quote
+          name
+          company
+        }
+      }
+    }
+  }
+`;
