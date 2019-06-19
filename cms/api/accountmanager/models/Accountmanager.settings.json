@@ -1,0 +1,51 @@
+{
+  "connection": "default",
+  "collectionName": "accountmanagers",
+  "info": {
+    "name": "accountmanager",
+    "description": "Account Managers"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "required": true,
+      "unique": true,
+      "type": "string"
+    },
+    "bio": {
+      "type": "text"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "emailAddress": {
+      "type": "email"
+    },
+    "servicedetails": {
+      "collection": "servicedetail",
+      "via": "accountmanagers",
+      "dominant": true
+    }
+  }
+}
