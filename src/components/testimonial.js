@@ -12,7 +12,7 @@ const Testimonial = ({ quote, client, company }) => (
       data-aos-delay='300'
       data-aos-once='true'
     >
-      <p className='quote'>“{quote}”</p>
+      <p className='quote'>{quote}</p>
       <p className='client'>
         {client}, {company}
       </p>
