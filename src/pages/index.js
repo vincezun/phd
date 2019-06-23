@@ -287,13 +287,14 @@ const Home = ({ data }) => (
           />
         </div>
       </section>
-      {data.allStrapiTestimonial.edges.map((document, i) => {
+      {data.allStrapiTestimonial.edges.map(document => {
         const get = document.node;
+        const id = get.id;
         const quote = get.quote;
         const name = get.name;
         const company = get.company;
         return (
-          <Testimonial key={i} quote={quote} client={name} company={company} />
+          <Testimonial key={id} quote={quote} client={name} company={company} />
         );
       })}
     </div>
@@ -307,6 +308,7 @@ export const query = graphql`
     allStrapiTestimonial(filter: { name: { eq: "A. Customer" } }) {
       edges {
         node {
+          id
           quote
           name
           company
