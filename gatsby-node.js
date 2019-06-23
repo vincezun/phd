@@ -30,6 +30,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             serviceoverview {
               slug
             }
+            accountmanager {
+              imagePath
+            }
           }
         }
       }
@@ -42,7 +45,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         path: `/${node.serviceoverview.slug}/${node.slug}`,
         component: path.resolve(`src/templates/service-detail.js`),
         context: {
-          slug: node.slug
+          slug: node.slug,
+          imagePath: node.accountmanager.imagePath
         }
       });
     });
