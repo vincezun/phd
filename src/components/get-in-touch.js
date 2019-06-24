@@ -11,7 +11,6 @@ const GetInTouch = () => (
       data-aos-easing='ease'
       data-aos-duration='1000'
       data-aos-delay='300'
-      data-aos-once='true'
     >
       <div>
         <h2 className='title'>
