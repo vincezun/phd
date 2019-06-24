@@ -1,0 +1,131 @@
+@import '_colors.scss';
+@import '_typography.scss';
+@import '_mixins.scss';
+
+.service-detail-wrapper {
+  section:first-child {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.5),
+        transparent 23%
+      ),
+      linear-gradient(to top, #0b0b0b 1%, rgba(32, 32, 32, 0.14) 98%),
+      url('../images/service-detail-bg.png');
+    @include hero-section-bg;
+
+    .w-container {
+      @include hero-container;
+
+      @include breakpoint(sm-screen) {
+        padding: 175px 16% 75px;
+      }
+
+      @include breakpoint(md-lg-screen) {
+        padding: 220px 30px 100px;
+      }
+    }
+
+    .hero-section {
+      .heading {
+        @include hero-heading;
+
+        @include breakpoint(sm-screen) {
+          font: 4.8rem/50px $f-bold;
+        }
+
+        @include breakpoint(md-lg-screen) {
+          font: 6rem/65px $f-bold;
+          width: 546px;
+          margin: 0 auto;
+        }
+
+        @include breakpoint(lg-screen) {
+          width: 705px;
+        }
+      }
+
+      .description {
+        @include hero-description;
+
+        @include breakpoint(md-lg-screen) {
+          width: 546px;
+          margin: 15px auto 0;
+        }
+
+        @include breakpoint(lg-screen) {
+          width: 705px;
+        }
+      }
+    }
+  }
+
+  section:nth-child(2) {
+    background-color: $c-white;
+
+    .w-container {
+      display: grid;
+      justify-items: center;
+      grid-row-gap: 20px;
+      padding: 50px 30px;
+
+      @include breakpoint(sm-screen) {
+        padding: 75px 30px 100px;
+      }
+
+      @include breakpoint(lg-screen) {
+        padding: 100px 30px;
+        grid-template-columns: 456px 456px;
+        justify-content: center;
+        grid-template-areas:
+          'title title'
+          'description description'
+          'tool-details tool-details';
+        grid-column-gap: 20px;
+      }
+    }
+
+    .tool-list {
+      .title {
+        font: 2.8rem/32px $f-bold;
+        color: $c-black;
+        text-align: center;
+
+        @include breakpoint(sm-screen) {
+          font: 4rem/50px $f-bold;
+          margin: 0 25px;
+        }
+
+        @include breakpoint(md-lg-screen) {
+          width: 531px;
+          margin: 0;
+        }
+
+        @include breakpoint(lg-screen) {
+          grid-area: title;
+        }
+      }
+
+      .description {
+        font: 1.6rem/30px $f-light;
+        color: $c-gray-850;
+        text-align: center;
+        margin: 10px 0 0;
+
+        @include breakpoint(md-lg-screen) {
+          width: 531px;
+        }
+
+        @include breakpoint(lg-screen) {
+          grid-area: description;
+          margin-bottom: 30px;
+        }
+      }
+
+      .tool-details {
+        @include breakpoint(lg-screen) {
+          grid-area: tool-details;
+        }
+      }
+    }
+  }
+}

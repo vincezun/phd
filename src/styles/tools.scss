@@ -1,0 +1,58 @@
+@import '_colors.scss';
+@import '_typography.scss';
+@import '_mixins.scss';
+
+.tool {
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(165, 165, 165, 0.25);
+  width: 100%;
+
+  @include breakpoint(lg-screen) {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 20px auto auto 1fr;
+    grid-column-gap: 5px;
+    align-items: flex-start;
+  }
+
+  .fancy-arrow {
+    width: 20px;
+
+    @include breakpoint(lg-screen) {
+      margin-top: 5px;
+    }
+  }
+
+  .tool-name {
+    font: 1.6rem/30px $f-bold;
+    color: $c-gray-850;
+    margin-top: 7px;
+
+    @include breakpoint(lg-screen) {
+      margin: 0;
+      padding-left: 20px;
+    }
+  }
+
+  .dash {
+    display: none;
+
+    @include breakpoint(lg-screen) {
+      display: inline;
+      padding: 0 5px;
+      font: 1.6rem/30px $f-bold;
+      color: $c-gray-850;
+    }
+  }
+
+  .tool-description {
+    font: 1.6rem/30px $f-light;
+    color: $c-gray-850;
+
+    @include breakpoint(lg-screen) {
+      line-height: 20px;
+      margin-top: 5px;
+    }
+  }
+}
