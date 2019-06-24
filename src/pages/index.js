@@ -34,7 +34,6 @@ const Home = ({ data }) => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
-            data-aos-once='true'
           >
             Ensuring your project remains up and running
           </h1>
@@ -44,7 +43,6 @@ const Home = ({ data }) => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
-            data-aos-once='true'
           >
             PHd provide plant, MEWPS, tool, accommodation and waste solutions to
             site's through out the UK and Europen Union. With a network of
@@ -59,7 +57,6 @@ const Home = ({ data }) => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
-            data-aos-once='true'
           />
         </div>
       </section>
@@ -71,7 +68,6 @@ const Home = ({ data }) => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
-            data-aos-once='true'
           >
             OUR SERVICES
           </p>
@@ -83,7 +79,6 @@ const Home = ({ data }) => (
               data-aos-duration='1000'
               data-aos-delay='300'
               data-aos-anchor-placement='top'
-              data-aos-once='true'
             >
               <img
                 src={whiteCirle}
@@ -113,7 +108,6 @@ const Home = ({ data }) => (
               data-aos-duration='1000'
               data-aos-delay='300'
               data-aos-anchor-placement='top'
-              data-aos-once='true'
             >
               <img
                 src={scissorlift}
@@ -142,7 +136,6 @@ const Home = ({ data }) => (
               data-aos-duration='1000'
               data-aos-delay='300'
               data-aos-anchor-placement='top'
-              data-aos-once='true'
             >
               <img src={forklift} alt='Forklift' className='forklift' />
               <Link to='/specialities'>
@@ -163,7 +156,6 @@ const Home = ({ data }) => (
               data-aos-duration='1000'
               data-aos-delay='300'
               data-aos-anchor-placement='top'
-              data-aos-once='true'
             >
               <img
                 src={whiteCirle}
@@ -198,7 +190,6 @@ const Home = ({ data }) => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
-            data-aos-once='true'
           >
             HOW WE WORK
           </p>
@@ -208,7 +199,6 @@ const Home = ({ data }) => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
-            data-aos-once='true'
           >
             Dedicated Account Managers
           </p>
@@ -218,7 +208,6 @@ const Home = ({ data }) => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
-            data-aos-once='true'
           >
             <div className='w-title'>
               <img
@@ -239,7 +228,6 @@ const Home = ({ data }) => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
-            data-aos-once='true'
           >
             <div className='w-title'>
               <img
@@ -260,7 +248,6 @@ const Home = ({ data }) => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
-            data-aos-once='true'
           >
             <div className='w-title'>
               <img
@@ -283,7 +270,6 @@ const Home = ({ data }) => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
-            data-aos-once='true'
           />
         </div>
       </section>

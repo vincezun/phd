@@ -31,7 +31,6 @@ const ServiceDetailTemplate = ({ data }) => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
-            data-aos-once='true'
           >
             {data.sd.name}
           </h1>
@@ -41,7 +40,6 @@ const ServiceDetailTemplate = ({ data }) => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
-            data-aos-once='true'
           >
             {data.sd.introductionText}
           </p>
@@ -56,7 +54,6 @@ const ServiceDetailTemplate = ({ data }) => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
-            data-aos-once='true'
           >
             {data.sd.toolListHeading}
           </p>
@@ -66,7 +63,6 @@ const ServiceDetailTemplate = ({ data }) => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
-            data-aos-once='true'
             data-aos-anchor='.title'
           >
             {data.sd.toolListText}

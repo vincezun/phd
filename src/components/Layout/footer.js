@@ -18,7 +18,6 @@ const Footer = () => (
         data-aos-easing='ease'
         data-aos-duration='1000'
         data-aos-delay='300'
-        data-aos-once='true'
       >
         <p className='title'>About Us</p>
         <p className='description'>
@@ -38,7 +37,6 @@ const Footer = () => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
-            data-aos-once='true'
           >
             <img src={twitterLogo} alt='Twitter logo' className='social-logo' />
             <figcaption className='title'>Twitter</figcaption>
@@ -51,7 +49,6 @@ const Footer = () => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
-            data-aos-once='true'
           >
             <img
               src={facebookLogo}
@@ -68,7 +65,6 @@ const Footer = () => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
-            data-aos-once='true'
           >
             <img
               src={instagramLogo}
@@ -87,7 +83,6 @@ const Footer = () => (
         data-aos-easing='ease'
         data-aos-duration='1000'
         data-aos-delay='300'
-        data-aos-once='true'
         data-aos-anchor='.instagram-link'
       >
         <li className='credits'>© Plant Hire Division 2019</li>

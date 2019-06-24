@@ -107,7 +107,6 @@ class Navbar extends Component {
             data-aos-easing='ease'
             data-aos-duration='700'
             data-aos-delay='100'
-            data-aos-once='true'
           >
             <Link to='/'>
               <img
@@ -124,7 +123,6 @@ class Navbar extends Component {
               data-aos-easing='ease'
               data-aos-duration='700'
               data-aos-delay='100'
-              data-aos-once='true'
             >
               <img
                 onClick={this.hideNavOverlay}
