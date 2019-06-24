@@ -32,7 +32,12 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: `http://localhost:1337`,
-        contentTypes: [`serviceoverview`, `servicedetail`, `testimonial`],
+        contentTypes: [
+          `serviceoverview`,
+          `servicedetail`,
+          `testimonial`,
+          `casestudy`
+        ],
         queryLimit: 5000
       }
     }

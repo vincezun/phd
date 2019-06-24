@@ -52,6 +52,36 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     });
   });
 
+  const getCaseStudies = makeRequest(
+    graphql,
+    `
+    {
+      allStrapiCasestudy {
+        edges {
+          node {
+            slug
+            accountmanager {
+              imagePath
+            }
+          }
+        }
+      }
+    }
+    `
+  ).then(result => {
+    // Create pages for each article.
+    result.data.allStrapiCasestudy.edges.forEach(({ node }) => {
+      createPage({
+        path: `/case-studies/${node.slug}`,
+        component: path.resolve(`src/templates/case-study.js`),
+        context: {
+          slug: node.slug,
+          imagePath: node.accountmanager.imagePath
+        }
+      });
+    });
+  });
+
   // Query for articles nodes to use in creating pages.
-  return getServiceDetails;
+  return Promise.all([getServiceDetails, getCaseStudies]);
 };
