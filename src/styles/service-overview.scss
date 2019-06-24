@@ -95,6 +95,7 @@
       @include breakpoint(lg-screen) {
         grid-template-columns: 466px 466px;
         grid-template-rows: 270px;
+        overflow: hidden;
       }
 
       .w-container {
@@ -114,6 +115,10 @@
 
           &:nth-child(odd) {
             background-color: $c-black-900;
+          }
+
+          &:hover {
+            background-color: $c-gray-800;
           }
 
           grid-template-areas:
@@ -164,6 +169,11 @@
         @include breakpoint(md-lg-screen) {
           display: block;
           grid-area: image;
+          margin-top: -5px;
+        }
+
+        @include breakpoint(lg-screen) {
+          margin-top: -8px;
         }
       }
     }
