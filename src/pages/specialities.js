@@ -16,13 +16,14 @@ const Specialities = ({ data }) => (
     <div className='service-overview-wrapper'>
       <section>
         <div className='hero-section w-container'>
-          {data.allStrapiServiceoverview.edges.map((document, i) => {
+          {data.allStrapiServiceoverview.edges.map(document => {
             const get = document.node;
+            const id = get.id;
             const name = get.name;
             const slug = get.slug;
             const introductionText = get.introductionText;
             return (
-              <div key={i}>
+              <div key={id}>
                 <SEO title={name} />
                 <Breadcrumb link={slug} name={name} subName='' />
                 <h1
@@ -53,18 +54,20 @@ const Specialities = ({ data }) => (
       </section>
       <section>
         <div>
-          {data.allStrapiServiceoverview.edges.map((document, i) => {
+          {data.allStrapiServiceoverview.edges.map(document => {
             const base = document.node.slug;
+            const id = document.node.id;
             return (
-              <div key={i}>
-                {document.node.servicedetails.map((document, i) => {
+              <div key={id}>
+                {document.node.servicedetails.map(document => {
                   const slug = document.slug;
+                  const id = document.id;
                   const name = document.name;
                   const introductionText = document.introductionText;
                   const image = document.image.childImageSharp.fluid;
                   return (
                     <div
-                      key={i}
+                      key={id}
                       className='service-details'
                       data-aos='fade-up'
                       data-aos-easing='ease'
@@ -102,10 +105,12 @@ export const query = graphql`
     allStrapiServiceoverview(filter: { name: { eq: "Specialities" } }) {
       edges {
         node {
+          id
           slug
           name
           introductionText
           servicedetails {
+            id
             slug
             name
             introductionText
