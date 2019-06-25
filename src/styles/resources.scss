@@ -1,0 +1,196 @@
+@import '_colors.scss';
+@import '_typography.scss';
+@import '_mixins.scss';
+
+.resources-wrapper {
+  section:first-child {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.5),
+        transparent 23%
+      ),
+      linear-gradient(to top, #0b0b0b 1%, rgba(32, 32, 32, 0.14) 98%),
+      url('../images/phd-resources-bg.png');
+    @include hero-section-bg;
+    background-position: top left;
+
+    .w-container {
+      @include hero-container;
+
+      @include breakpoint(sm-screen) {
+        padding: 175px 16% 75px;
+      }
+
+      @include breakpoint(md-lg-screen) {
+        padding: 220px 30px 100px;
+      }
+    }
+
+    .hero-section {
+      .heading {
+        @include hero-heading;
+
+        @include breakpoint(sm-screen) {
+          font: 4.8rem/50px $f-bold;
+        }
+
+        @include breakpoint(md-lg-screen) {
+          font: 6rem/65px $f-bold;
+          width: 546px;
+          margin: 0 auto;
+        }
+
+        @include breakpoint(lg-screen) {
+          width: 705px;
+        }
+      }
+
+      .description {
+        @include hero-description;
+
+        @include breakpoint(md-lg-screen) {
+          width: 546px;
+          margin: 15px auto 0;
+        }
+
+        @include breakpoint(lg-screen) {
+          width: 705px;
+        }
+      }
+    }
+  }
+
+  section:nth-child(2) {
+    background-color: $c-white;
+
+    .w-container {
+      padding: 50px 30px;
+
+      @include breakpoint(md-lg-screen) {
+        padding: 75px 30px;
+      }
+
+      @include breakpoint(lg-screen) {
+        padding: 100px 30px;
+      }
+    }
+
+    .resources-content {
+      .resources-details + .resources-details {
+        margin-top: 40px;
+      }
+
+      .resources-details {
+        display: grid;
+        grid-template-columns: 37px 1fr;
+        grid-column-gap: 20px;
+        justify-content: center;
+        align-items: flex-start;
+        border-bottom: 1px solid rgba(165, 165, 165, 0.25);
+        margin: auto;
+
+        @include breakpoint(md-lg-screen) {
+          grid-template-columns: 42px 641px;
+          grid-column-gap: 40px;
+          width: 688px;
+        }
+
+        .resource {
+          display: grid;
+          grid-template-columns: 1fr 10px;
+          grid-template-areas:
+            'name arrow'
+            'file file';
+          grid-column-gap: 20px;
+          grid-row-gap: 7px;
+
+          @include breakpoint(sm-screen) {
+            grid-template-areas:
+              'name arrow'
+              'file arrow'
+              'description arrow';
+          }
+
+          .resource-name {
+            font: 1.8rem/22px $f-bold;
+            color: $c-gray-850;
+            grid-area: name;
+
+            @include breakpoint(md-lg-screen) {
+              font: 2.6rem/30px $f-bold;
+            }
+          }
+
+          .file-type {
+            font: 1.2rem/20px $f-light;
+            color: $c-gray-850;
+            grid-area: file;
+            padding-bottom: 40px;
+
+            @include breakpoint(sm-screen) {
+              padding-bottom: 0;
+            }
+
+            @include breakpoint(md-lg-screen) {
+              font: 1.6rem/32px $f-light;
+            }
+          }
+
+          .description {
+            display: none;
+
+            @include breakpoint(sm-screen) {
+              display: block;
+              grid-area: description;
+              font: 1.6rem/30px $f-light;
+              color: $c-gray-200;
+              margin-top: 7px;
+              padding-bottom: 40px;
+            }
+          }
+
+          .arrow-right {
+            width: 10px;
+            grid-area: arrow;
+            margin-top: 4px;
+          }
+        }
+      }
+
+      a:nth-child(odd) {
+        .gatsby-image-wrapper {
+          width: 37px !important;
+          height: 41px !important;
+          margin-top: 4px;
+
+          @include breakpoint(lg-screen) {
+            width: 39px !important;
+            height: 41px !important;
+          }
+
+          picture {
+            img {
+              width: 37px !important;
+              height: 41px !important;
+            }
+          }
+        }
+      }
+
+      a:nth-child(even) {
+        .gatsby-image-wrapper {
+          width: 36px !important;
+          height: 36px !important;
+          margin-top: 3px;
+
+          picture {
+            img {
+              width: 36px !important;
+              height: 36px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
