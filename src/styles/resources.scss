@@ -63,17 +63,7 @@
   section:nth-child(2) {
     background-color: $c-white;
 
-    .w-container {
-      padding: 50px 30px;
-
-      @include breakpoint(md-lg-screen) {
-        padding: 75px 30px;
-      }
-
-      @include breakpoint(lg-screen) {
-        padding: 100px 30px;
-      }
-    }
+    @include w-container;
 
     .resources-content {
       .resources-details + .resources-details {

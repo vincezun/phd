@@ -81,17 +81,7 @@
   section:nth-child(2) {
     background-color: $c-white;
 
-    .w-container {
-      padding: 50px 30px;
-
-      @include breakpoint(sm-screen) {
-        padding: 75px 30px;
-      }
-
-      @include breakpoint(lg-screen) {
-        padding: 100px 30px;
-      }
-    }
+    @include w-container;
 
     .case-study-details {
       text-align: center;
