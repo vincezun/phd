@@ -62,7 +62,7 @@ const CaseStudyTemplate = ({ data }) => (
         </div>
       </section>
       <section>
-        <div className='case-study-details  w-container'>
+        <div className='case-study-details'>
           <p
             className='sub-title'
             data-aos='fade-up'

@@ -75,6 +75,7 @@ const ToolHire = ({ data }) => (
                       data-aos-easing='ease'
                       data-aos-duration='1000'
                       data-aos-delay='300'
+                      data-aos-offset='10'
                     >
                       <Link to={`/${base}/${slug}`} className='w-container'>
                         <h3 className='service-name'>{name}</h3>

@@ -291,7 +291,7 @@ const Home = ({ data }) => (
 export default Home;
 
 export const query = graphql`
-  query testimonial {
+  query testimonialHome {
     allStrapiTestimonial(filter: { name: { eq: "A. Customer" } }) {
       edges {
         node {

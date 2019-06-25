@@ -58,6 +58,7 @@ const Training = ({ data }) => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
+            data-aos-anchor='.description'
           >
             <p className='title'>Industry Accredited</p>
             <p className='description'>

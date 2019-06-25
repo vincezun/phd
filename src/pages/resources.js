@@ -48,7 +48,7 @@ const Resources = ({ data }) => (
         </div>
       </section>
       <section>
-        <div className='resources-content  w-container'>
+        <div className='resources-content'>
           {data.allStrapiResource.edges.map(document => {
             const get = document.node;
             const id = get.id;

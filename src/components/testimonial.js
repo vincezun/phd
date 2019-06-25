@@ -3,7 +3,7 @@ import React from 'react';
 import '../styles/testimonial.scss';
 
 const Testimonial = ({ quote, client, company }) => (
-  <section className='yellow-background'>
+  <section className='testimonial-background'>
     <div
       className='testimonial w-container'
       data-aos='fade-up'
