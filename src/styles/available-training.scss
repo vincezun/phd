@@ -1,0 +1,112 @@
+@import '_colors.scss';
+@import '_typography.scss';
+@import '_mixins.scss';
+
+.available-training-background {
+  background-color: $c-white;
+
+  @include w-container;
+
+  .available-training {
+    text-align: center;
+
+    @include breakpoint(md-lg-screen) {
+      display: grid;
+      grid-template-columns: 339px 339px;
+      grid-template-areas:
+        'title title'
+        't1 t2'
+        't3 t4';
+      grid-column-gap: 2px;
+      justify-content: center;
+    }
+
+    @include breakpoint(lg-screen) {
+      grid-template-columns: 233px 233px 233px 233px;
+      grid-template-areas:
+        'title title title title'
+        't1 t2 t3 t4';
+      text-align: left;
+    }
+
+    .title {
+      font: 2.8rem/32px $f-bold;
+      color: $c-gray-850;
+      margin-bottom: 40px;
+
+      @include breakpoint(sm-screen) {
+        font: 4.2rem/46px $f-bold;
+      }
+
+      @include breakpoint(md-lg-screen) {
+        grid-area: title;
+      }
+
+      @include breakpoint(lg-screen) {
+        text-align: center;
+      }
+    }
+
+    > div {
+      background-color: $c-white-50;
+      padding: 40px 15px;
+      border-bottom: 2px solid $c-yellow;
+
+      p:nth-child(2) {
+        font: 1.4rem/20px $f-light;
+        color: $c-gray-850;
+        margin-top: 30px;
+      }
+
+      p:nth-child(4) {
+        font: 1.2rem/20px $f-light;
+        color: $c-gray-850;
+        margin: 4px 0 25px;
+      }
+
+      .training-name {
+        font: 2.6rem/32px $f-bold;
+        color: $c-gray-700;
+      }
+
+      .price {
+        font: 2.6rem/32px $f-semibold;
+        color: $c-gray-850;
+      }
+    }
+
+    div:nth-last-of-type(-n + 3) {
+      margin-top: 30px;
+
+      @include breakpoint(md-lg-screen) {
+        margin-top: 0;
+      }
+    }
+
+    div:nth-child(2) {
+      grid-area: t1;
+    }
+
+    div:nth-child(3) {
+      grid-area: t2;
+    }
+
+    div:nth-child(4) {
+      grid-area: t3;
+      margin-top: 30px;
+
+      @include breakpoint(lg-screen) {
+        margin-top: 0;
+      }
+    }
+
+    div:nth-child(5) {
+      grid-area: t4;
+      margin-top: 30px;
+
+      @include breakpoint(lg-screen) {
+        margin-top: 0;
+      }
+    }
+  }
+}

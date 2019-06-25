@@ -1,0 +1,134 @@
+@import '_colors.scss';
+@import '_typography.scss';
+@import '_mixins.scss';
+
+.pricing-background {
+  background-color: $c-yellow;
+
+  @include w-container;
+
+  .pricing {
+    text-align: center;
+
+    @include breakpoint(md-lg-screen) {
+      display: grid;
+      grid-template-columns: 353px 353px;
+      grid-template-areas:
+        'title title'
+        'p1 p2'
+        'p3 p4'
+        'p5 p6'
+        'description description';
+      justify-content: center;
+      grid-row-gap: 2px;
+      grid-column-gap: 2px;
+    }
+
+    @include breakpoint(lg-screen) {
+      grid-template-columns: 154px 154px 154px 154px 154px 154px;
+      grid-template-areas:
+        'title title title title title title'
+        'p1 p2 p3 p4 p5 p6'
+        'description description description description description description';
+    }
+    .title {
+      font: 2.8rem/32px $f-bold;
+      color: $c-gray-850;
+      margin-bottom: 30px;
+
+      @include breakpoint(sm-screen) {
+        font: 4.2rem/46px $f-bold;
+      }
+
+      @include breakpoint(md-lg-screen) {
+        grid-area: title;
+      }
+    }
+
+    .description {
+      font: italic 1.6rem/27px $f-light;
+      color: $c-gray-850;
+      margin-top: 30px;
+
+      @include breakpoint(md-lg-screen) {
+        grid-area: description;
+      }
+    }
+
+    .pricing-title {
+      font: 1.6rem/31px $f-bold;
+      color: $c-white;
+      margin-bottom: 5px;
+    }
+
+    .price {
+      font: 1.4rem/20px $f-regular;
+      color: $c-white;
+      display: inline;
+    }
+
+    .unit {
+      font: 1.4rem/20px $f-regular;
+      color: $c-gray-200;
+      display: inline;
+      margin-left: 5px;
+    }
+
+    > div {
+      background-color: $c-black;
+      padding: 30px 15px;
+
+      @include breakpoint(lg-screen) {
+        text-align: left;
+      }
+    }
+
+    div:nth-child(2) {
+      @include breakpoint(md-lg-screen) {
+        grid-area: p1;
+      }
+    }
+
+    div:nth-child(3) {
+      @include breakpoint(md-lg-screen) {
+        grid-area: p2;
+      }
+    }
+
+    div:nth-child(4) {
+      @include breakpoint(md-lg-screen) {
+        grid-area: p3;
+      }
+    }
+
+    div:nth-child(5) {
+      @include breakpoint(md-lg-screen) {
+        grid-area: p4;
+      }
+    }
+
+    div:nth-child(6) {
+      @include breakpoint(md-lg-screen) {
+        grid-area: p5;
+      }
+    }
+
+    div:nth-child(7) {
+      @include breakpoint(md-lg-screen) {
+        grid-area: p6;
+      }
+    }
+
+    div:nth-last-of-type(-n + 5) {
+      margin-top: 2px;
+
+      @include breakpoint(md-lg-screen) {
+        margin: 0;
+      }
+
+      @include breakpoint(lg-screen) {
+        margin: 0;
+      }
+    }
+  }
+}

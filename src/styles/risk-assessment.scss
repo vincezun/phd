@@ -1,0 +1,66 @@
+@import '_colors.scss';
+@import '_typography.scss';
+@import '_mixins.scss';
+
+.risk-assessment-background {
+  background-color: $c-white;
+
+  @include w-container;
+
+  .risk-assessments {
+    .title {
+      font: 3.5rem/38px $f-bold;
+      color: $c-gray-850;
+      text-align: left;
+
+      @include breakpoint(md-lg-screen) {
+        width: 650px;
+        margin: auto;
+      }
+    }
+
+    .introduction-text {
+      font: 1.6rem/27px $f-light;
+      color: $c-gray-850;
+      text-align: left;
+      margin-top: 40px;
+
+      @include breakpoint(md-lg-screen) {
+        width: 650px;
+        margin: 40px auto;
+      }
+    }
+
+    .details {
+      list-style: none;
+      text-align: left;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-row-gap: 40px;
+      justify-content: center;
+      margin-top: 40px;
+
+      li {
+        display: grid;
+        grid-template-columns: 16px 1fr;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(165, 165, 165, 0.25);
+
+        @include breakpoint(md-lg-screen) {
+          width: 650px;
+          margin: auto;
+        }
+      }
+
+      .number {
+        font: 1.6rem/30px $f-bold;
+        color: $c-yellow;
+      }
+
+      .description {
+        font: 1.6rem/30px $f-light;
+        color: $c-gray-850;
+      }
+    }
+  }
+}

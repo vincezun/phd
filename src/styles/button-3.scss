@@ -1,0 +1,11 @@
+@import '_colors.scss';
+@import '_typography.scss';
+@import '_mixins.scss';
+
+.button-3 {
+  font: 1.6rem/20px $f-semibold;
+  color: $c-yellow-150;
+  text-decoration: underline;
+  display: block;
+  margin-top: 15px;
+}

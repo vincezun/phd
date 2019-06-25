@@ -1,0 +1,140 @@
+@import '_colors.scss';
+@import '_typography.scss';
+@import '_mixins.scss';
+
+.training-wrapper {
+  section:first-child {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.5),
+        transparent 23%
+      ),
+      linear-gradient(to top, #0b0b0b 1%, rgba(32, 32, 32, 0.14) 98%),
+      url('../images/phd-training-bg.png');
+    @include hero-section-bg;
+    background-position: top;
+
+    .w-container {
+      @include hero-container;
+
+      @include breakpoint(sm-screen) {
+        padding: 175px 10% 75px;
+      }
+
+      @include breakpoint(md-lg-screen) {
+        padding: 220px 30px 100px;
+      }
+    }
+
+    .hero-section {
+      .heading {
+        @include hero-heading;
+
+        @include breakpoint(sm-screen) {
+          font: 4.8rem/50px $f-bold;
+        }
+
+        @include breakpoint(md-lg-screen) {
+          font: 6rem/65px $f-bold;
+          width: 546px;
+          margin: 0 auto;
+        }
+
+        @include breakpoint(lg-screen) {
+          width: 705px;
+        }
+      }
+
+      .description {
+        @include hero-description;
+
+        @include breakpoint(md-lg-screen) {
+          width: 546px;
+          margin: 15px auto 0;
+        }
+
+        @include breakpoint(lg-screen) {
+          width: 705px;
+        }
+      }
+    }
+  }
+
+  section:nth-child(2) {
+    background-color: $c-white;
+
+    @include w-container;
+
+    .industry-accredited {
+      text-align: center;
+
+      @include breakpoint(lg-screen) {
+        display: grid;
+        grid-template-columns: 426px 426px;
+        grid-template-areas:
+          'introduction introduction'
+          'q-one q-two';
+        justify-content: center;
+        align-items: flex-start;
+        grid-column-gap: 80px;
+        grid-row-gap: 50px;
+      }
+
+      .introduction {
+        @include breakpoint(lg-screen) {
+          grid-area: introduction;
+        }
+
+        .title {
+          font: 2.8rem/32px $f-bold;
+          color: $c-gray-850;
+
+          @include breakpoint(sm-screen) {
+            font: 4.2rem/46px $f-bold;
+          }
+        }
+
+        .description {
+          font: 1.6rem/27px $f-light;
+          color: $c-gray-850;
+          margin-top: 30px;
+
+          @include breakpoint(lg-screen) {
+            width: 720px;
+            margin: 30px auto 0;
+          }
+        }
+      }
+
+      .question-one {
+        @include breakpoint(lg-screen) {
+          grid-area: q-one;
+          text-align: left;
+        }
+      }
+
+      .question-two {
+        @include breakpoint(lg-screen) {
+          grid-area: q-two;
+          text-align: left;
+        }
+      }
+
+      .question {
+        font: 2.6rem/32px $f-bold;
+        color: $c-gray-700;
+        margin-top: 50px;
+
+        @include breakpoint(lg-screen) {
+          margin: 0;
+        }
+      }
+
+      .answer {
+        font: 1.6rem/27px $f-light;
+        color: $c-gray-850;
+        margin-top: 20px;
+      }
+    }
+  }
+}
