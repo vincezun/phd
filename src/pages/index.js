@@ -34,6 +34,7 @@ const Home = ({ data }) => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
+            data-aos-offset='5'
           >
             Ensuring your project remains up and running
           </h1>

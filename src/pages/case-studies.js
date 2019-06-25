@@ -33,6 +33,7 @@ const CaseStudies = ({ data }) => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
+            data-aos-anchor='.heading'
           >
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
             eget lacinia odio sem nec elit. Curabitur blandit tempus porttitor.
