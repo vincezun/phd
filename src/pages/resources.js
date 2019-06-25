@@ -16,7 +16,10 @@ const Resources = ({ data }) => (
   <Layout>
     <div className='resources-wrapper'>
       <section>
-        <div className='hero-section w-container'>
+        <div
+          className='hero-section w-container'
+          aria-label='Plant Hire Division Resources'
+        >
           <SEO title='Resources' />
           <Breadcrumb link='resources' name='Resources' />
           <h1

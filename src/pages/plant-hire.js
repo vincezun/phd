@@ -15,7 +15,10 @@ const PlantHire = ({ data }) => (
   <Layout>
     <div className='service-overview-wrapper'>
       <section>
-        <div className='hero-section w-container'>
+        <div
+          className='hero-section w-container'
+          aria-label='Plant Hire Division Services'
+        >
           {data.allStrapiServiceoverview.edges.map(document => {
             const get = document.node;
             const id = get.id;
