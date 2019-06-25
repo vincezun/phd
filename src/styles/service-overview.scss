@@ -12,6 +12,7 @@
       linear-gradient(to top, #0b0b0b 1%, rgba(32, 32, 32, 0.14) 98%),
       url('../images/phd-services-bg.png');
     @include hero-section-bg;
+    background-position: top;
 
     .w-container {
       @include hero-container;
