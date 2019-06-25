@@ -36,7 +36,9 @@ module.exports = {
           `serviceoverview`,
           `servicedetail`,
           `testimonial`,
-          `casestudy`
+          `casestudy`,
+          `resource`,
+          `accountmanager`
         ],
         queryLimit: 5000
       }
