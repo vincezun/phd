@@ -42,20 +42,19 @@ module.exports = {
         ],
         queryLimit: 5000
       }
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: `Plant Hire Division`,
+        short_name: `PHd`,
+        start_url: `/`,
+        background_color: `#101010`,
+        theme_color: `#101010`,
+        display: `standalone`,
+        orientation: `landscape`,
+        icon: `src/images/phd.png`
+      }
     }
-
-    // {
-    //   resolve: 'gatsby-plugin-manifest',
-    //   options: {
-    //     name: `Plant Hire Division`,
-    //     short_name: `PHd`,
-    //     start_url: `/`,
-    //     // background_color: `#1d1f21`,
-    //     // theme_color: `#1d1f21`,
-    //     display: `standalone`,
-    //     orientation: `landscape`
-    //     // icon: `src/images/terminal.png`
-    //   }
-    // }
   ]
 };
