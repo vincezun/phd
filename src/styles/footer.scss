@@ -107,7 +107,7 @@
 
       @include breakpoint(lg-screen) {
         display: grid;
-        grid-template-columns: 220px 368px 145px 90px 30px;
+        grid-template-columns: 170px 470px 145px 90px;
         grid-column-gap: 20px;
         justify-content: center;
       }
@@ -148,15 +148,9 @@
         }
       }
 
-      .credits {
-        @include breakpoint(lg-screen) {
-          margin-right: 50px;
-        }
-      }
-
       .registered {
         @include breakpoint(lg-screen) {
-          margin-right: 168px;
+          margin-right: 270px;
         }
       }
     }
