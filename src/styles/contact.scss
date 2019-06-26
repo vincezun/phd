@@ -1,0 +1,179 @@
+@import '_colors.scss';
+@import '_typography.scss';
+@import '_mixins.scss';
+
+.contact-wrapper {
+  section:first-child {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.5),
+        transparent 23%
+      ),
+      linear-gradient(to top, #0b0b0b 1%, rgba(32, 32, 32, 0.14) 98%),
+      url('../images/phd-contact-bg.png');
+    @include hero-section-bg;
+    background-position: top;
+
+    .w-container {
+      @include hero-container;
+
+      @include breakpoint(sm-screen) {
+        padding: 175px 16% 0;
+      }
+
+      @include breakpoint(md-lg-screen) {
+        padding: 220px 30px 0;
+      }
+    }
+
+    .hero-section {
+      .heading {
+        @include hero-heading;
+
+        @include breakpoint(sm-screen) {
+          font: 4.8rem/50px $f-bold;
+        }
+
+        @include breakpoint(md-lg-screen) {
+          font: 6rem/65px $f-bold;
+          width: 546px;
+          margin: 0 auto;
+        }
+
+        @include breakpoint(lg-screen) {
+          width: 705px;
+        }
+      }
+
+      .description {
+        @include hero-description;
+
+        @include breakpoint(md-lg-screen) {
+          width: 546px;
+          margin: 15px auto 0;
+        }
+
+        @include breakpoint(lg-screen) {
+          width: 705px;
+        }
+      }
+
+      %shared-font {
+        font: 1.6rem/30px $f-semibold;
+        color: $c-white;
+        text-align: center;
+      }
+
+      .hero-contact {
+        @extend %shared-font;
+        margin-top: 30px;
+      }
+
+      .email {
+        @extend %shared-font;
+        text-decoration: underline;
+        margin-top: 30px;
+      }
+
+      .contact-number {
+        @extend %shared-font;
+      }
+    }
+  }
+
+  section:nth-child(2) {
+    background-color: $c-gray-850;
+
+    @include w-container;
+
+    .contact-form {
+      @include breakpoint(md-lg-screen) {
+        display: grid;
+        grid-template-columns: 708px;
+        justify-content: center;
+      }
+
+      label {
+        font: 1.6rem/20px $f-light;
+        color: $c-white;
+        display: block;
+        margin-bottom: 7px;
+      }
+
+      %shared-property {
+        font: 1.4rem/20px $f-regular;
+        color: $c-gray-700;
+        width: 100%;
+        padding: 8px;
+        border: solid 1px transparent;
+        background-color: $c-white;
+
+        &:focus {
+          outline: none;
+        }
+
+        &.err {
+          border: solid 1px $c-red;
+        }
+      }
+
+      .full-name-field {
+        @extend %shared-property;
+      }
+
+      .email-field {
+        @extend %shared-property;
+      }
+
+      .phone-number-field {
+        @extend %shared-property;
+      }
+
+      .reason-field {
+        @extend %shared-property;
+      }
+
+      .message-field {
+        @extend %shared-property;
+      }
+
+      .err-msg {
+        font: 1.5rem/20px $f-light;
+        margin-top: 10px;
+        color: $c-red;
+      }
+
+      div + div {
+        margin-top: 30px;
+      }
+
+      .w-submit-btn {
+        text-align: center;
+
+        .submit-btn {
+          font: 1.4rem/20px $f-semibold;
+          color: $c-yellow;
+          border: 2px solid $c-yellow;
+          border-radius: 75px;
+          padding: 9px 15px;
+          width: 200px;
+          background-color: transparent;
+          cursor: pointer;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .success-msg {
+        background-color: $c-gray-100;
+        font: 1.6rem/20px $f-regular;
+        color: $c-gray-850;
+        padding: 20px;
+        text-align: center;
+        display: none;
+      }
+    }
+  }
+}
