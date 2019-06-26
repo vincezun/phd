@@ -12,13 +12,7 @@ const Footer = () => (
   <footer className='footer'>
     <div className='footer-links w-container'>
       <img src={phdLogo} className='phd-logo' alt='Plant Hire Division logo' />
-      <div
-        className='about-us'
-        data-aos='fade'
-        data-aos-easing='ease'
-        data-aos-duration='1000'
-        data-aos-delay='300'
-      >
+      <div className='about-us'>
         <p className='title'>About Us</p>
         <p className='description'>
           Onec sed odio duum sociis natoque penatibus et magnis dis parturient
@@ -31,25 +25,13 @@ const Footer = () => (
       </div>
       <div className='social-links'>
         <a href='https://www.twitter.com'>
-          <figure
-            className='twitter-link'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
-          >
+          <figure className='twitter-link'>
             <img src={twitterLogo} alt='Twitter logo' className='social-logo' />
             <figcaption className='title'>Twitter</figcaption>
           </figure>
         </a>
         <a href='https://www.facebook.com'>
-          <figure
-            className='facebook-link'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
-          >
+          <figure className='facebook-link'>
             <img
               src={facebookLogo}
               alt='Facebook logo'
@@ -59,13 +41,7 @@ const Footer = () => (
           </figure>
         </a>
         <a href='https://www.instagram.com'>
-          <figure
-            className='instagram-link'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
-          >
+          <figure className='instagram-link'>
             <img
               src={instagramLogo}
               alt='Instagram logo'
@@ -77,14 +53,7 @@ const Footer = () => (
       </div>
     </div>
     <div className='footer-bar'>
-      <ul
-        className='footer-detail w-container'
-        data-aos='fade'
-        data-aos-easing='ease'
-        data-aos-duration='1000'
-        data-aos-delay='300'
-        data-aos-anchor='.instagram-link'
-      >
+      <ul className='footer-detail w-container'>
         <li className='credits'>© Plant Hire Division 2019</li>
         <li className='registered'>Registered in England: 1471587</li>
         <li className='terms'>
