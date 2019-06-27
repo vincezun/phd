@@ -1,0 +1,17 @@
+@import '_colors.scss';
+@import '_typography.scss';
+@import '_mixins.scss';
+
+.button-4 {
+  font: 1.4rem/20px $f-bold;
+  text-transform: uppercase;
+  color: $c-gray-900;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  margin-top: 20px;
+
+  @include breakpoint(md-lg-screen) {
+    font: 1.8rem/24px $f-bold;
+    margin-top: 30px;
+  }
+}

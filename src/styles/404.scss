@@ -1,0 +1,47 @@
+@import '_colors.scss';
+@import '_typography.scss';
+@import '_mixins.scss';
+
+.page-not-found-background {
+  background-color: $c-yellow;
+  height: 100vh;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 110px 40px 50px;
+  grid-row-gap: 20px;
+  justify-content: center;
+  align-content: center;
+
+  @include breakpoint(md-lg-screen) {
+    grid-template-rows: 210px 40px 50px;
+  }
+
+  .title {
+    font: 10rem/110px $f-bold;
+    color: $c-white;
+    text-shadow: 4px 4px #e2b607;
+
+    @include breakpoint(md-lg-screen) {
+      font: 20rem/210px $f-bold;
+    }
+  }
+
+  .sub-title {
+    font: 2.5rem/30px $f-bold;
+    color: $c-white;
+
+    @include breakpoint(md-lg-screen) {
+      font: 3.5rem/40px $f-bold;
+    }
+  }
+
+  .description {
+    font: 1.4rem/20px $f-regular;
+    color: $c-white;
+
+    @include breakpoint(md-lg-screen) {
+      font: 1.8rem/24px $f-regular;
+    }
+  }
+}
