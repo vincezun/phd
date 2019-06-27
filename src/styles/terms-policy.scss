@@ -1,0 +1,57 @@
+@import '_colors.scss';
+@import '_typography.scss';
+@import '_mixins.scss';
+
+.terms-policy-wrapper {
+  section:first-child {
+    background-color: $c-gray-850;
+    @include hero-section-bg;
+
+    .w-container {
+      @include hero-container;
+
+      @include breakpoint(sm-screen) {
+        padding: 175px 16% 75px;
+      }
+
+      @include breakpoint(md-lg-screen) {
+        padding: 220px 30px 100px;
+      }
+    }
+
+    .hero-section {
+      .heading {
+        @include hero-heading;
+
+        @include breakpoint(sm-screen) {
+          font: 4.8rem/50px $f-bold;
+        }
+
+        @include breakpoint(md-lg-screen) {
+          font: 6rem/65px $f-bold;
+          width: 546px;
+          margin: 0 auto 30px;
+        }
+
+        @include breakpoint(lg-screen) {
+          width: 705px;
+        }
+      }
+
+      .description {
+        @include hero-description;
+
+        @include breakpoint(md-lg-screen) {
+          width: 546px;
+          margin: 15px auto 0;
+          text-align: justify;
+          text-indent: 50px;
+        }
+
+        @include breakpoint(lg-screen) {
+          width: 705px;
+        }
+      }
+    }
+  }
+}
