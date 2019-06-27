@@ -65,7 +65,6 @@ const Resources = ({ data }) => (
                 data-aos-easing='ease'
                 data-aos-duration='1000'
                 data-aos-delay='300'
-                data-aos-offset='5'
               >
                 <Img fixed={icon} alt={name} className='resource-image' />
                 <div className='resource'>

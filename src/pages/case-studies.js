@@ -60,7 +60,6 @@ const CaseStudies = ({ data }) => (
                 data-aos-easing='ease'
                 data-aos-duration='1000'
                 data-aos-delay='300'
-                data-aos-offset='10'
               >
                 <Link to={`/case-studies/${slug}`} className='w-container'>
                   <p className='case-study-name'>{name}</p>

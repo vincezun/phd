@@ -63,16 +63,16 @@ const Training = ({ data }) => (
             <p className='title'>Industry Accredited</p>
             <p className='description'>
               They must also be qualified with at least full membership of the
-              Institute of Occupational Safety and Health (IOSH) or the
-              International Institute of Risk andSafety Management (IIRSM). Our
-              expectation is that our consultants work towards attaining
-              chartered status. To maintain status with their professional body,
-              PHd consultants must be able to show that they undertake
-              Continuing Professional Development (CPD). PHd ensures that they
-              meet this requirement through regular routine training sessions
-              which ensure that consultants are kept up to date with changes to
-              legal requirements, guidance and best practice in the industries
-              with which they deal.
+              Institute of Occupational Safety and Health &#40;IOSH&#41; or the
+              International Institute of Risk andSafety Management
+              &#40;IIRSM&#41;. Our expectation is that our consultants work
+              towards attaining chartered status. To maintain status with their
+              professional body, PHd consultants must be able to show that they
+              undertake Continuing Professional Development &#40;CPD&#41;. PHd
+              ensures that they meet this requirement through regular routine
+              training sessions which ensure that consultants are kept up to
+              date with changes to legal requirements, guidance and best
+              practice in the industries with which they deal.
             </p>
           </div>
           <div

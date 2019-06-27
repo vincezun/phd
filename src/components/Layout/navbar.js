@@ -79,10 +79,8 @@ class Navbar extends Component {
   };
 
   onSubmit = () => {
-    var submitFormBtn = document.getElementById('submit-form-btn');
-    submitFormBtn.value = 'Please wait...';
-
     setTimeout(() => {
+      var submitFormBtn = document.getElementById('submit-form-btn');
       submitFormBtn.style.display = 'none';
 
       var fullName = document.getElementById('w-full-name');
@@ -108,7 +106,7 @@ class Navbar extends Component {
             data-aos-duration='700'
             data-aos-delay='100'
           >
-            <Link to='/'>
+            <Link to='/' className='w-phd-logo'>
               <img
                 src={phdLogo}
                 alt='Plant Hire Division logo'

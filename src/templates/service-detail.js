@@ -47,7 +47,7 @@ const ServiceDetailTemplate = ({ data }) => (
         </div>
       </section>
       <section>
-        <div className='tool-list  w-container'>
+        <div className='tool-list'>
           <p
             className='title'
             data-aos='fade-up'
