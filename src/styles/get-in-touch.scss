@@ -47,6 +47,10 @@
     .get-in-touch-link {
       font: 2.6rem/32px $f-bold;
 
+      &:focus {
+        outline: none;
+      }
+
       @include breakpoint(sm-screen) {
         font: 2.8rem/34px $f-bold;
       }

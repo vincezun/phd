@@ -33,19 +33,25 @@
       justify-content: center;
     }
 
-    .phd-logo {
-      width: 75px;
-
-      @include breakpoint(sm-screen) {
-        width: 100px;
+    .w-phd-logo {
+      &:focus {
+        outline: none;
       }
 
-      @include breakpoint(md-lg-screen) {
-        width: 150px;
-      }
+      .phd-logo {
+        width: 75px;
 
-      @include breakpoint(lg-screen) {
-        width: 200px;
+        @include breakpoint(sm-screen) {
+          width: 100px;
+        }
+
+        @include breakpoint(md-lg-screen) {
+          width: 150px;
+        }
+
+        @include breakpoint(lg-screen) {
+          width: 200px;
+        }
       }
     }
   }
@@ -234,6 +240,10 @@
         color: $c-black;
         display: block;
         user-select: none;
+
+        &:focus {
+          outline: none;
+        }
 
         @include breakpoint(sm-screen) {
           font: 2.4rem/30px $f-semibold;

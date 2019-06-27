@@ -63,18 +63,14 @@
   section:nth-child(2) {
     background-color: $c-white;
 
-    .w-container {
+    .tool-list {
       display: grid;
       justify-items: center;
       grid-row-gap: 20px;
-      padding: 50px 30px;
 
-      @include breakpoint(sm-screen) {
-        padding: 75px 30px 100px;
-      }
+      @include w-container;
 
       @include breakpoint(lg-screen) {
-        padding: 100px 30px;
         grid-template-columns: 456px 456px;
         justify-content: center;
         grid-template-areas:
@@ -83,9 +79,7 @@
           'tool-details tool-details';
         grid-column-gap: 20px;
       }
-    }
 
-    .tool-list {
       .title {
         font: 2.8rem/32px $f-bold;
         color: $c-black;

@@ -18,6 +18,10 @@
     text-decoration: underline;
   }
 
+  &:focus {
+    outline: none;
+  }
+
   @include breakpoint(sm-screen) {
     font: 1.4rem/30px $f-semibold;
     width: 151px;

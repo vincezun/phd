@@ -54,6 +54,10 @@
           font: 1.7rem/30px $f-semibold;
           color: $c-yellow-150;
           text-decoration: underline;
+
+          &:focus {
+            outline: none;
+          }
         }
       }
     }
