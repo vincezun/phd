@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "resources",
+  "info": {
+    "name": "resource",
+    "description": "Resources"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "fileType": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

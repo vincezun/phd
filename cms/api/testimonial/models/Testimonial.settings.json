@@ -1,0 +1,37 @@
+{
+  "connection": "default",
+  "collectionName": "testimonials",
+  "info": {
+    "name": "testimonial",
+    "description": "Testimonials"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "quote": {
+      "type": "text"
+    },
+    "company": {
+      "type": "string"
+    },
+    "servicedetails": {
+      "collection": "servicedetail",
+      "via": "testimonial"
+    },
+    "casestudies": {
+      "collection": "casestudy",
+      "via": "testimonial"
+    }
+  }
+}

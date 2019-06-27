@@ -1,0 +1,55 @@
+{
+  "connection": "default",
+  "collectionName": "servicedetails",
+  "info": {
+    "name": "servicedetail",
+    "description": "Service Details"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "required": true,
+      "unique": true,
+      "type": "string"
+    },
+    "slug": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "introductionText": {
+      "type": "text"
+    },
+    "toolListHeading": {
+      "type": "string"
+    },
+    "toolListText": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "serviceoverview": {
+      "model": "serviceoverview",
+      "via": "servicedetails"
+    },
+    "accountmanager": {
+      "model": "accountmanager",
+      "via": "servicedetails"
+    },
+    "testimonial": {
+      "model": "testimonial",
+      "via": "servicedetails"
+    },
+    "tools": {
+      "collection": "tool",
+      "via": "servicedetails"
+    }
+  }
+}

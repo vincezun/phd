@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/accountmanagers",
+      "handler": "Accountmanager.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/accountmanagers/count",
+      "handler": "Accountmanager.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/accountmanagers/:id",
+      "handler": "Accountmanager.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/accountmanagers",
+      "handler": "Accountmanager.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/accountmanagers/:id",
+      "handler": "Accountmanager.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/accountmanagers/:id",
+      "handler": "Accountmanager.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

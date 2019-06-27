@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/serviceoverviews",
+      "handler": "Serviceoverview.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/serviceoverviews/count",
+      "handler": "Serviceoverview.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/serviceoverviews/:id",
+      "handler": "Serviceoverview.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/serviceoverviews",
+      "handler": "Serviceoverview.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/serviceoverviews/:id",
+      "handler": "Serviceoverview.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/serviceoverviews/:id",
+      "handler": "Serviceoverview.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

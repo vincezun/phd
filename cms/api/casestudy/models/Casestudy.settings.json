@@ -1,0 +1,47 @@
+{
+  "connection": "default",
+  "collectionName": "casestudies",
+  "info": {
+    "name": "casestudy",
+    "description": "Case Studies"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "introduction": {
+      "type": "text"
+    },
+    "details": {
+      "type": "text"
+    },
+    "accountmanager": {
+      "model": "accountmanager",
+      "via": "casestudies"
+    },
+    "slug": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "testimonial": {
+      "model": "testimonial",
+      "via": "casestudies"
+    }
+  }
+}

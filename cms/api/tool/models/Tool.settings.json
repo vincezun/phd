@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "tools",
+  "info": {
+    "name": "tool",
+    "description": "Tool Details"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "unique": true,
+      "required": true,
+      "type": "string"
+    },
+    "details": {
+      "type": "text"
+    },
+    "servicedetails": {
+      "collection": "servicedetail",
+      "via": "tools",
+      "dominant": true
+    }
+  }
+}
