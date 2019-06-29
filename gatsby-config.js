@@ -4,7 +4,10 @@ module.exports = {
   siteMetadata: {
     title: `Plant Hire Division`,
     description: `PHd provide plant, MEWPS, tool, accommodation and waste solutions to site's through out the UK and Europen Union. With a network of approved suppliers whom we know are up to the job and meet the high standards we demand.`,
-    author: `@vincezun`
+    author: `Vince Zuño`,
+    social: {
+      twitter: `@vincezun`
+    }
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
