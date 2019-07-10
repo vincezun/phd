@@ -56,10 +56,10 @@ module.exports = {
         start_url: `/`,
         background_color: `#101010`,
         theme_color: `#101010`,
-        display: `standalone`,
-        orientation: `landscape`,
+        display: `minimal-ui`,
         icon: `src/images/phd.png`
       }
-    }
+    },
+    `gatsby-plugin-offline`
   ]
 };
