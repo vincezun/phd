@@ -55,6 +55,7 @@ const CaseStudyTemplate = ({ data }) => (
             data-aos-easing='ease'
             data-aos-duration='1000'
             data-aos-delay='300'
+            data-aos-anchor='.heading'
           >
             {data.cs.introduction}
           </p>
