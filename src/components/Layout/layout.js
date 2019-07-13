@@ -17,75 +17,81 @@ import regular from '../../fonts/gilroy-regular-webfont.woff2';
 import semibold from '../../fonts/gilroy-semibold-webfont.woff2';
 import semibolditalic from '../../fonts/gilroy-semibolditalic-webfont.woff2';
 
-class Layout extends Component {
-  componentDidMount() {
-    AOS.init();
-    AOS.refreshHard();
-  }
-
-  render() {
-    const children = this.props.children;
-    return (
-      <StaticQuery
-        query={graphql`
-          query SiteTitleQuery {
-            site {
-              siteMetadata {
-                title
-              }
+const Layout = ({ children }) => {
+  return (
+    <StaticQuery
+      query={graphql`
+        query SiteTitleQuery {
+          site {
+            siteMetadata {
+              title
             }
           }
-        `}
-        render={() => (
-          <Fragment>
-            <Helmet>
-              <link
-                rel="preload"
-                as="font"
-                href={light}
-                type="font/woff2"
-                crossOrigin="anonymous"
-              />
-              <link
-                rel="preload"
-                as="font"
-                href={regular}
-                type="font/woff2"
-                crossOrigin="anonymous"
-              />
-              <link
-                rel="preload"
-                as="font"
-                href={semibold}
-                type="font/woff2"
-                crossOrigin="anonymous"
-              />
-              <link
-                rel="preload"
-                as="font"
-                href={semibolditalic}
-                type="font/woff2"
-                crossOrigin="anonymous"
-              />
-              <link
-                rel="preload"
-                as="font"
-                href={bold}
-                type="font/woff2"
-                crossOrigin="anonymous"
-              />
-            </Helmet>
-            <Navbar />
-            <div>
-              <main role="main">{children}</main>
-            </div>
-            <Footer />
-          </Fragment>
-        )}
-      />
-    );
-  }
-}
+        }
+      `}
+      render={() => (
+        <Fragment>
+          <Helmet>
+            <link
+              rel="preload"
+              as="font"
+              href={light}
+              type="font/woff2"
+              crossOrigin="anonymous"
+            />
+            <link
+              rel="preload"
+              as="font"
+              href={regular}
+              type="font/woff2"
+              crossOrigin="anonymous"
+            />
+            <link
+              rel="preload"
+              as="font"
+              href={semibold}
+              type="font/woff2"
+              crossOrigin="anonymous"
+            />
+            <link
+              rel="preload"
+              as="font"
+              href={semibolditalic}
+              type="font/woff2"
+              crossOrigin="anonymous"
+            />
+            <link
+              rel="preload"
+              as="font"
+              href={bold}
+              type="font/woff2"
+              crossOrigin="anonymous"
+            />
+          </Helmet>
+          <Navbar />
+          <div>
+            <main role="main">{children}</main>
+          </div>
+          <Footer />
+        </Fragment>
+      )}
+    />
+  );
+};
+
+// class Layout extends Component {
+//   // componentDidMount() {
+//   //   AOS.init();
+//   //   AOS.refreshHard();
+//   // }
+
+//   render() {
+//     const children = this.props.children;
+//     return (
+
+//     );
+//   }
+// }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired
