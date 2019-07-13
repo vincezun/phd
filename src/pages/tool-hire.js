@@ -13,11 +13,11 @@ import CallUsBtn from '../components/Button/button-2';
 
 const ToolHire = ({ data }) => (
   <Layout>
-    <div className='service-overview-wrapper'>
+    <div className="service-overview-wrapper">
       <section>
         <div
-          className='hero-section w-container'
-          aria-label='Plant Hire Division Services'
+          className="hero-section w-container"
+          aria-label="Plant Hire Division Services"
         >
           {data.allStrapiServiceoverview.edges.map(document => {
             const get = document.node;
@@ -28,23 +28,23 @@ const ToolHire = ({ data }) => (
             return (
               <div key={id}>
                 <SEO title={name} />
-                <Breadcrumb link={slug} name={name} subName='' />
+                <Breadcrumb link={slug} name={name} subLink="#" />
                 <h1
-                  className='heading'
-                  data-aos='fade-down'
-                  data-aos-easing='ease'
-                  data-aos-duration='1000'
-                  data-aos-delay='300'
+                  className="heading"
+                  data-aos="fade-down"
+                  data-aos-easing="ease"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
                 >
                   {name}
                 </h1>
                 <p
-                  className='description'
-                  data-aos='fade-up'
-                  data-aos-easing='ease'
-                  data-aos-duration='1000'
-                  data-aos-delay='300'
-                  data-aos-anchor='.heading'
+                  className="description"
+                  data-aos="fade-up"
+                  data-aos-easing="ease"
+                  data-aos-duration="1000"
+                  data-aos-delay="300"
+                  data-aos-anchor=".heading"
                 >
                   {introductionText}
                 </p>
@@ -70,19 +70,19 @@ const ToolHire = ({ data }) => (
                   return (
                     <div
                       key={id}
-                      className='service-details'
-                      data-aos='fade-up'
-                      data-aos-easing='ease'
-                      data-aos-duration='1000'
-                      data-aos-delay='300'
+                      className="service-details"
+                      data-aos="fade-up"
+                      data-aos-easing="ease"
+                      data-aos-duration="1000"
+                      data-aos-delay="300"
                     >
-                      <Link to={`/${base}/${slug}`} className='w-container'>
-                        <h3 className='service-name'>{name}</h3>
-                        <p className='description'>{introductionText}</p>
+                      <Link to={`/${base}/${slug}`} className="w-container">
+                        <h3 className="service-name">{name}</h3>
+                        <p className="description">{introductionText}</p>
                         <div
-                          className='arrow-right'
-                          aria-label='Yellow right arrow button'
-                          role='button'
+                          className="arrow-right"
+                          aria-label="Yellow right arrow button"
+                          role="button"
                         />
                       </Link>
                       <Img fluid={image} alt={name} />

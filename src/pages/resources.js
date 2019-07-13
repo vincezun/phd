@@ -14,30 +14,30 @@ import arrowRight from '../images/arrow-right-yellow.png';
 
 const Resources = ({ data }) => (
   <Layout>
-    <div className='resources-wrapper'>
+    <div className="resources-wrapper">
       <section>
         <div
-          className='hero-section w-container'
-          aria-label='Plant Hire Division Resources'
+          className="hero-section w-container"
+          aria-label="Plant Hire Division Resources"
         >
-          <SEO title='Resources' />
-          <Breadcrumb link='resources' name='Resources' />
+          <SEO title="Resources" />
+          <Breadcrumb link="resources" name="Resources" subLink="#" />
           <h1
-            className='heading'
-            data-aos='fade-down'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="heading"
+            data-aos="fade-down"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
             Resources
           </h1>
           <p
-            className='description'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
-            data-aos-anchor='.heading'
+            className="description"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-aos-anchor=".heading"
           >
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
             eget lacinia odio sem nec elit. Curabitur blandit tempus porttitor.
@@ -48,7 +48,7 @@ const Resources = ({ data }) => (
         </div>
       </section>
       <section>
-        <div className='resources-content'>
+        <div className="resources-content">
           {data.allStrapiResource.edges.map(document => {
             const get = document.node;
             const id = get.id;
@@ -59,23 +59,23 @@ const Resources = ({ data }) => (
             return (
               <Link
                 key={id}
-                to='/resources#'
-                className='resources-details'
-                data-aos='fade-up'
-                data-aos-easing='ease'
-                data-aos-duration='1000'
-                data-aos-delay='300'
+                to="/resources#"
+                className="resources-details"
+                data-aos="fade-up"
+                data-aos-easing="ease"
+                data-aos-duration="1000"
+                data-aos-delay="300"
               >
-                <Img fixed={icon} alt={name} className='resource-image' />
-                <div className='resource'>
-                  <p className='resource-name'>{name}</p>
+                <Img fixed={icon} alt={name} className="resource-image" />
+                <div className="resource">
+                  <p className="resource-name">{name}</p>
                   <img
                     src={arrowRight}
-                    alt='Arrow Right'
-                    className='arrow-right'
+                    alt="Arrow Right"
+                    className="arrow-right"
                   />
-                  <p className='file-type'>{fileType}</p>
-                  <p className='description'>{description}</p>
+                  <p className="file-type">{fileType}</p>
+                  <p className="description">{description}</p>
                 </div>
               </Link>
             );

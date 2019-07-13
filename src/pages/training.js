@@ -17,30 +17,30 @@ import CallUsBtn from '../components/Button/button-2';
 
 const Training = ({ data }) => (
   <Layout>
-    <div className='training-wrapper'>
+    <div className="training-wrapper">
       <section>
         <div
-          className='hero-section w-container'
-          aria-label='Plant Hire Division Training'
+          className="hero-section w-container"
+          aria-label="Plant Hire Division Training"
         >
-          <SEO title='Training' />
-          <Breadcrumb link='training' name='Training' />
+          <SEO title="Training" />
+          <Breadcrumb link="training" name="Training" subLink="#" />
           <h1
-            className='heading'
-            data-aos='fade-down'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="heading"
+            data-aos="fade-down"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
             Our consultants are fully trained and qualified
           </h1>
           <p
-            className='description'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
-            data-aos-anchor='.heading'
+            className="description"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-aos-anchor=".heading"
           >
             At Plant Hire Division we take great care in recruiting our health
             and safety consultants. They must be able to show competency,
@@ -51,17 +51,17 @@ const Training = ({ data }) => (
         </div>
       </section>
       <section>
-        <div className='industry-accredited w-container'>
+        <div className="industry-accredited w-container">
           <div
-            className='introduction'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
-            data-aos-anchor='.description'
+            className="introduction"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-aos-anchor=".description"
           >
-            <p className='title'>Industry Accredited</p>
-            <p className='description'>
+            <p className="title">Industry Accredited</p>
+            <p className="description">
               They must also be qualified with at least full membership of the
               Institute of Occupational Safety and Health &#40;IOSH&#41; or the
               International Institute of Risk andSafety Management
@@ -76,16 +76,16 @@ const Training = ({ data }) => (
             </p>
           </div>
           <div
-            className='question-one'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="question-one"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
-            <p className='question'>
+            <p className="question">
               Will they understand and know what is required of my business?
             </p>
-            <p className='answer'>
+            <p className="answer">
               Almost certainly; because of their business backgrounds and our
               own internal training and development arrangements our consultants
               will be able to apply their skills to your circumstances. In the
@@ -99,14 +99,14 @@ const Training = ({ data }) => (
             </p>
           </div>
           <div
-            className='question-two'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="question-two"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
-            <p className='question'>What will they do for me?</p>
-            <p className='answer'>
+            <p className="question">What will they do for me?</p>
+            <p className="answer">
               Initially our consultants will visit your premises and evaluate
               your compliance with current health and safety legislation. They
               will ensure that you can demonstrate an effective safety
