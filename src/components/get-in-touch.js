@@ -4,25 +4,25 @@ import { Link } from 'gatsby';
 import '../styles/get-in-touch.scss';
 
 const GetInTouch = () => (
-  <section className='stripe-tile-background'>
+  <section className="stripe-tile-background">
     <div
-      className='get-in-touch w-container'
-      data-aos='fade-up'
-      data-aos-easing='ease'
-      data-aos-duration='1000'
-      data-aos-delay='300'
+      className="get-in-touch w-container"
+      // data-aos='fade-up'
+      // data-aos-easing='ease'
+      // data-aos-duration='1000'
+      // data-aos-delay='300'
     >
       <div>
-        <h2 className='title'>
+        <h2 className="title">
           Cant find what your looking for? We can source most equipment
         </h2>
         <br />
-        <Link to='/contact' className='get-in-touch-link' role='button'>
+        <Link to="/contact" className="get-in-touch-link" role="button">
           Get in touch
         </Link>
       </div>
       <div>
-        <p className='description'>
+        <p className="description">
           With over 20 years experience the PhD team has met every demanding
           situation the industry can throw up.  We pride ourselves on our
           customers and the loyalty they have continuously shown through the

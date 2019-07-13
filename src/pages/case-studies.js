@@ -13,27 +13,27 @@ import CallUsBtn from '../components/Button/button-2';
 
 const CaseStudies = ({ data }) => (
   <Layout>
-    <div className='case-studies-wrapper'>
+    <div className="case-studies-wrapper">
       <section>
-        <div className='hero-section w-container'>
-          <SEO title='Case Studies' />
-          <Breadcrumb link='case-studies' name='Case Studies' />
+        <div className="hero-section w-container">
+          <SEO title="Case Studies" />
+          <Breadcrumb link="case-studies" name="Case Studies" />
           <h1
-            className='heading'
-            data-aos='fade-down'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="heading"
+            // data-aos='fade-down'
+            // data-aos-easing='ease'
+            // data-aos-duration='1000'
+            // data-aos-delay='300'
           >
             Case Studies
           </h1>
           <p
-            className='description'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
-            data-aos-anchor='.heading'
+            className="description"
+            // data-aos='fade-up'
+            // data-aos-easing='ease'
+            // data-aos-duration='1000'
+            // data-aos-delay='300'
+            // data-aos-anchor='.heading'
           >
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
             eget lacinia odio sem nec elit. Curabitur blandit tempus porttitor.
@@ -55,23 +55,23 @@ const CaseStudies = ({ data }) => (
             return (
               <div
                 key={id}
-                className='case-studies-details'
-                data-aos='fade-up'
-                data-aos-easing='ease'
-                data-aos-duration='1000'
-                data-aos-delay='300'
+                className="case-studies-details"
+                // data-aos='fade-up'
+                // data-aos-easing='ease'
+                // data-aos-duration='1000'
+                // data-aos-delay='300'
               >
-                <Link to={`/case-studies/${slug}`} className='w-container'>
-                  <p className='case-study-name'>{name}</p>
-                  <p className='description'>{introduction}</p>
+                <Link to={`/case-studies/${slug}`} className="w-container">
+                  <p className="case-study-name">{name}</p>
+                  <p className="description">{introduction}</p>
                   <div
-                    className='arrow-right'
-                    aria-label='Yellow right arrow button'
-                    role='button'
+                    className="arrow-right"
+                    aria-label="Yellow right arrow button"
+                    role="button"
                   />
                 </Link>
-                <div className='yellow-bg'>
-                  <Img fixed={logo} alt={name} className='logo' />
+                <div className="yellow-bg">
+                  <Img fixed={logo} alt={name} className="logo" />
                 </div>
               </div>
             );
