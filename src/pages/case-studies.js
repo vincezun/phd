@@ -20,20 +20,20 @@ const CaseStudies = ({ data }) => (
           <Breadcrumb link="case-studies" name="Case Studies" />
           <h1
             className="heading"
-            // data-aos='fade-down'
-            // data-aos-easing='ease'
-            // data-aos-duration='1000'
-            // data-aos-delay='300'
+            data-aos="fade-down"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
             Case Studies
           </h1>
           <p
             className="description"
-            // data-aos='fade-up'
-            // data-aos-easing='ease'
-            // data-aos-duration='1000'
-            // data-aos-delay='300'
-            // data-aos-anchor='.heading'
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-aos-anchor=".heading"
           >
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
             eget lacinia odio sem nec elit. Curabitur blandit tempus porttitor.
@@ -56,10 +56,10 @@ const CaseStudies = ({ data }) => (
               <div
                 key={id}
                 className="case-studies-details"
-                // data-aos='fade-up'
-                // data-aos-easing='ease'
-                // data-aos-duration='1000'
-                // data-aos-delay='300'
+                data-aos="fade-up"
+                data-aos-easing="ease"
+                data-aos-duration="1000"
+                data-aos-delay="300"
               >
                 <Link to={`/case-studies/${slug}`} className="w-container">
                   <p className="case-study-name">{name}</p>
