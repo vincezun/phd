@@ -18,41 +18,41 @@ import whiteTileVertical from '../images/white-tile-vertical.png';
 
 const AboutUs = ({ data }) => (
   <Layout>
-    <div className='about-us-wrapper'>
+    <div className="about-us-wrapper">
       <section>
         <div
-          className='hero-section w-container'
-          aria-label='Plant Hire Division Services'
+          className="hero-section w-container"
+          aria-label="Plant Hire Division Services"
         >
-          <SEO title='About Us' />
-          <Breadcrumb link='about-us' name='About Us' />
-          <img src={whiteCirle} alt='White Circle' className='white-circle' />
+          <SEO title="About Us" />
+          <Breadcrumb link="about-us" name="About Us" subLink="" />
+          <img src={whiteCirle} alt="White Circle" className="white-circle" />
           <img
             src={whiteTileHorizontal}
-            alt='White Tile Horizontal'
-            className='white-tile-horizontal'
+            alt="White Tile Horizontal"
+            className="white-tile-horizontal"
           />
           <img
             src={whiteTileVertical}
-            alt='White Tile Vertical'
-            className='white-tile-vertical'
+            alt="White Tile Vertical"
+            className="white-tile-vertical"
           />
           <h1
-            className='heading'
-            data-aos='fade-down'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="heading"
+            data-aos="fade-down"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
             About Us
           </h1>
           <p
-            className='description'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
-            data-aos-anchor='.heading'
+            className="description"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-aos-anchor=".heading"
           >
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
             eget lacinia odio sem nec elit. Curabitur blandit tempus porttitor.
@@ -73,24 +73,24 @@ const AboutUs = ({ data }) => (
         );
       })}
       <section>
-        <div className='national-coverage'>
+        <div className="national-coverage">
           <p
-            className='title'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
-            data-aos-offset='5'
+            className="title"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-aos-offset="5"
           >
             National Coverage
           </p>
           <p
-            className='description'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
-            data-aos-anchor='.title'
+            className="description"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-aos-anchor=".title"
           >
             Cum sociis natoque penatibus et magnis dis parturient montes,
             nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi
@@ -103,116 +103,116 @@ const AboutUs = ({ data }) => (
           </p>
 
           <figure
-            className='list'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="list"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
-            <img src={fancyArrow} alt='Arrow' className='fancy-arrow' />
-            <figcaption className='name'>
+            <img src={fancyArrow} alt="Arrow" className="fancy-arrow" />
+            <figcaption className="name">
               Malesuada Dapibus Elit Vestibulum Ipsum
             </figcaption>
           </figure>
           <figure
-            className='list'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="list"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
-            <img src={fancyArrow} alt='Arrow' className='fancy-arrow' />
-            <figcaption className='name'>
+            <img src={fancyArrow} alt="Arrow" className="fancy-arrow" />
+            <figcaption className="name">
               Mattis Nibh Fusce Dolor Sit
             </figcaption>
           </figure>
           <figure
-            className='list'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="list"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
-            <img src={fancyArrow} alt='Arrow' className='fancy-arrow' />
-            <figcaption className='name'>Dolor Venenatis Sit</figcaption>
+            <img src={fancyArrow} alt="Arrow" className="fancy-arrow" />
+            <figcaption className="name">Dolor Venenatis Sit</figcaption>
           </figure>
           <figure
-            className='list'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="list"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
-            <img src={fancyArrow} alt='Arrow' className='fancy-arrow' />
-            <figcaption className='name'>
+            <img src={fancyArrow} alt="Arrow" className="fancy-arrow" />
+            <figcaption className="name">
               Mattis Risus Ridiculus Fermentum Magna
             </figcaption>
           </figure>
           <figure
-            className='list'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="list"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
-            <img src={fancyArrow} alt='Arrow' className='fancy-arrow' />
-            <figcaption className='name'>
+            <img src={fancyArrow} alt="Arrow" className="fancy-arrow" />
+            <figcaption className="name">
               Sem Condimentum Tristique Fringilla Parturient
             </figcaption>
           </figure>
           <figure
-            className='list'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="list"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
-            <img src={fancyArrow} alt='Arrow' className='fancy-arrow' />
-            <figcaption className='name'>Dolor Venenatis Sit</figcaption>
+            <img src={fancyArrow} alt="Arrow" className="fancy-arrow" />
+            <figcaption className="name">Dolor Venenatis Sit</figcaption>
           </figure>
           <figure
-            className='list'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="list"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
-            <img src={fancyArrow} alt='Arrow' className='fancy-arrow' />
-            <figcaption className='name'>
+            <img src={fancyArrow} alt="Arrow" className="fancy-arrow" />
+            <figcaption className="name">
               Mattis Nibh Fusce Dolor Sit
             </figcaption>
           </figure>
           <figure
-            className='list'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="list"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
-            <img src={fancyArrow} alt='Arrow' className='fancy-arrow' />
-            <figcaption className='name'>
+            <img src={fancyArrow} alt="Arrow" className="fancy-arrow" />
+            <figcaption className="name">
               Parturient Inceptos Euismod Dolor Etiam
             </figcaption>
           </figure>
           <figure
-            className='list'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="list"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
-            <img src={fancyArrow} alt='Arrow' className='fancy-arrow' />
-            <figcaption className='name'>Fusce Sem Euismod Dolor</figcaption>
+            <img src={fancyArrow} alt="Arrow" className="fancy-arrow" />
+            <figcaption className="name">Fusce Sem Euismod Dolor</figcaption>
           </figure>
           <figure
-            className='list'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="list"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
-            <img src={fancyArrow} alt='Arrow' className='fancy-arrow' />
-            <figcaption className='name'>
+            <img src={fancyArrow} alt="Arrow" className="fancy-arrow" />
+            <figcaption className="name">
               Sem Condimentum Tristique Fringilla Parturient
             </figcaption>
           </figure>
