@@ -15,7 +15,7 @@ const Breadcrumb = ({ link, name, subName, subLink }) => (
       <Link to="/">HOME</Link>
     </li>
     <li>
-      <Link to={`/${link}`} activeClassName="active">
+      <Link to={`/${link}/`} activeClassName="active">
         {name}
       </Link>
     </li>
