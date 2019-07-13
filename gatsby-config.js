@@ -60,7 +60,7 @@ module.exports = {
         icon: `src/images/phd.png`
       }
     },
-    `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-remove-fingerprints`
   ]
 };
