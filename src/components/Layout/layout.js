@@ -1,4 +1,5 @@
 import React, { Fragment, Component } from 'react';
+import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 
@@ -39,44 +40,44 @@ class Layout extends Component {
           <Fragment>
             <Helmet>
               <link
-                rel='preload'
-                as='font'
+                rel="preload"
+                as="font"
                 href={light}
-                type='font/woff2'
-                crossOrigin='anonymous'
+                type="font/woff2"
+                crossOrigin="anonymous"
               />
               <link
-                rel='preload'
-                as='font'
+                rel="preload"
+                as="font"
                 href={regular}
-                type='font/woff2'
-                crossOrigin='anonymous'
+                type="font/woff2"
+                crossOrigin="anonymous"
               />
               <link
-                rel='preload'
-                as='font'
+                rel="preload"
+                as="font"
                 href={semibold}
-                type='font/woff2'
-                crossOrigin='anonymous'
+                type="font/woff2"
+                crossOrigin="anonymous"
               />
               <link
-                rel='preload'
-                as='font'
+                rel="preload"
+                as="font"
                 href={semibolditalic}
-                type='font/woff2'
-                crossOrigin='anonymous'
+                type="font/woff2"
+                crossOrigin="anonymous"
               />
               <link
-                rel='preload'
-                as='font'
+                rel="preload"
+                as="font"
                 href={bold}
-                type='font/woff2'
-                crossOrigin='anonymous'
+                type="font/woff2"
+                crossOrigin="anonymous"
               />
             </Helmet>
             <Navbar />
             <div>
-              <main role='main'>{children}</main>
+              <main role="main">{children}</main>
             </div>
             <Footer />
           </Fragment>
@@ -85,5 +86,9 @@ class Layout extends Component {
     );
   }
 }
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired
+};
 
 export default Layout;
