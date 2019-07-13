@@ -39,7 +39,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
     `
   ).then(result => {
-    // Create pages for each article.
+    // Create pages for each service overview.
     result.data.allStrapiServicedetail.edges.forEach(({ node }) => {
       createPage({
         path: `/${node.serviceoverview.slug}/${node.slug}`,
@@ -69,7 +69,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
     `
   ).then(result => {
-    // Create pages for each article.
+    // Create pages for each case study.
     result.data.allStrapiCasestudy.edges.forEach(({ node }) => {
       createPage({
         path: `/case-studies/${node.slug}`,
@@ -82,6 +82,6 @@ exports.createPages = ({ actions, graphql }) => {
     });
   });
 
-  // Query for articles nodes to use in creating pages.
+  // Query for service overview and case study nodes to use in creating pages.
   return Promise.all([getServiceDetails, getCaseStudies]);
 };
