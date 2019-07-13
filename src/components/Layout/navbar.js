@@ -101,10 +101,10 @@ class Navbar extends Component {
         <div className="nav-menu">
           <div
             className="w-container"
-            // data-aos='fade'
-            // data-aos-easing='ease'
-            // data-aos-duration='700'
-            // data-aos-delay='100'
+            data-aos="fade"
+            data-aos-easing="ease"
+            data-aos-duration="700"
+            data-aos-delay="100"
           >
             <Link to="/" className="w-phd-logo">
               <img
@@ -117,10 +117,10 @@ class Navbar extends Component {
           <ul className="nav-overlay" id="nav-overlay" role="tree">
             <div
               className="w-nav-overlay"
-              // data-aos='fade'
-              // data-aos-easing='ease'
-              // data-aos-duration='700'
-              // data-aos-delay='100'
+              data-aos="fade"
+              data-aos-easing="ease"
+              data-aos-duration="700"
+              data-aos-delay="100"
             >
               <img
                 onClick={this.hideNavOverlay}
@@ -146,7 +146,7 @@ class Navbar extends Component {
                 <ul className="dropdown-link" role="tree">
                   <li role="presentation">
                     <Link
-                      to="/plant-hire"
+                      to="/plant-hire/"
                       role="treeitem"
                       activeClassName="active-link"
                     >
@@ -155,7 +155,7 @@ class Navbar extends Component {
                   </li>
                   <li role="presentation">
                     <Link
-                      to="/working-platforms"
+                      to="/working-platforms/"
                       role="treeitem"
                       activeClassName="active-link"
                     >
@@ -164,7 +164,7 @@ class Navbar extends Component {
                   </li>
                   <li role="presentation">
                     <Link
-                      to="/specialities"
+                      to="/specialities/"
                       role="treeitem"
                       activeClassName="active-link"
                     >
@@ -173,7 +173,7 @@ class Navbar extends Component {
                   </li>
                   <li role="presentation">
                     <Link
-                      to="/tool-hire"
+                      to="/tool-hire/"
                       role="treeitem"
                       activeClassName="active-link"
                     >
@@ -184,7 +184,7 @@ class Navbar extends Component {
               </li>
               <li role="presentation">
                 <Link
-                  to="/case-studies"
+                  to="/case-studies/"
                   role="treeitem"
                   activeClassName="active-link"
                 >
@@ -193,7 +193,7 @@ class Navbar extends Component {
               </li>
               <li role="presentation">
                 <Link
-                  to="/resources"
+                  to="/resources/"
                   role="treeitem"
                   activeClassName="active-link"
                 >
@@ -202,7 +202,7 @@ class Navbar extends Component {
               </li>
               <li role="presentation">
                 <Link
-                  to="/training"
+                  to="/training/"
                   role="treeitem"
                   activeClassName="active-link"
                 >
@@ -211,7 +211,7 @@ class Navbar extends Component {
               </li>
               <li role="presentation">
                 <Link
-                  to="/contact"
+                  to="/contact/"
                   role="treeitem"
                   activeClassName="active-link"
                 >
@@ -334,10 +334,10 @@ class Navbar extends Component {
         <div className="menu-section">
           <div
             className="call-btn"
-            // data-aos='fade'
-            // data-aos-easing='ease'
-            // data-aos-duration='700'
-            // data-aos-delay='100'
+            data-aos="fade"
+            data-aos-easing="ease"
+            data-aos-duration="700"
+            data-aos-delay="100"
           >
             <CallBtn />
           </div>
@@ -348,10 +348,10 @@ class Navbar extends Component {
             className="menu-btn"
             id="menu-btn"
             role="button"
-            // data-aos='fade'
-            // data-aos-easing='ease'
-            // data-aos-duration='700'
-            // data-aos-delay='100'
+            data-aos="fade"
+            data-aos-easing="ease"
+            data-aos-duration="700"
+            data-aos-delay="100"
           />
         </div>
       </nav>
