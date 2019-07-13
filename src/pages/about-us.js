@@ -25,11 +25,7 @@ const AboutUs = ({ data }) => (
           aria-label="Plant Hire Division Services"
         >
           <SEO title="About Us" />
-<<<<<<< HEAD
           <Breadcrumb link="about-us" name="About Us" subLink="" />
-=======
-          <Breadcrumb link="about-us" name="About Us" subLink="#" />
->>>>>>> ce5436c0c72426cab42d5d8dd56b56bc3cfb4311
           <img src={whiteCirle} alt="White Circle" className="white-circle" />
           <img
             src={whiteTileHorizontal}

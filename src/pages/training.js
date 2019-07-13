@@ -24,11 +24,7 @@ const Training = ({ data }) => (
           aria-label="Plant Hire Division Training"
         >
           <SEO title="Training" />
-<<<<<<< HEAD
           <Breadcrumb link="training" name="Training" subLink="" />
-=======
-          <Breadcrumb link="training" name="Training" subLink="#" />
->>>>>>> ce5436c0c72426cab42d5d8dd56b56bc3cfb4311
           <h1
             className="heading"
             data-aos="fade-down"
