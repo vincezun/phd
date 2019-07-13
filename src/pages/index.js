@@ -91,7 +91,7 @@ const Home = ({ data }) => (
                 alt="White Tile Vertical"
                 className="white-tile-vertical"
               />
-              <Link to="/plant-hire/">
+              <Link to="/plant-hire">
                 <div className="w-container">
                   <figcaption className="sub-title">Plant Hire</figcaption>
                   <div
@@ -115,7 +115,7 @@ const Home = ({ data }) => (
                 alt="Scissorlift"
                 className="scissor-lift"
               />
-              <Link to="/working-platforms/">
+              <Link to="/working-platforms">
                 <div className="w-container">
                   <figcaption className="sub-title">
                     Working Platforms
@@ -139,7 +139,7 @@ const Home = ({ data }) => (
               data-aos-anchor-placement="top"
             >
               <img src={forklift} alt="Forklift" className="forklift" />
-              <Link to="/specialities/">
+              <Link to="/specialities">
                 <div className="w-container">
                   <figcaption className="sub-title">Specialities</figcaption>
                   <div
@@ -168,7 +168,7 @@ const Home = ({ data }) => (
                 alt="White Tile Horizontal"
                 className="white-tile-horizontal"
               />
-              <Link to="/tool-hire/">
+              <Link to="/tool-hire">
                 <div className="w-container">
                   <figcaption className="sub-title">Tool Hire</figcaption>
                   <div
