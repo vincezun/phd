@@ -21,7 +21,11 @@ const Resources = ({ data }) => (
           aria-label="Plant Hire Division Resources"
         >
           <SEO title="Resources" />
+<<<<<<< HEAD
           <Breadcrumb link="resources" name="Resources" subLink="" />
+=======
+          <Breadcrumb link="resources" name="Resources" subLink="#" />
+>>>>>>> ce5436c0c72426cab42d5d8dd56b56bc3cfb4311
           <h1
             className="heading"
             data-aos="fade-down"

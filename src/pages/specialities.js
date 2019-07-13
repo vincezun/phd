@@ -28,7 +28,11 @@ const Specialities = ({ data }) => (
             return (
               <div key={id}>
                 <SEO title={name} />
+<<<<<<< HEAD
                 <Breadcrumb link={slug} name={name} subLink="" />
+=======
+                <Breadcrumb link={slug} name={name} subLink="#" />
+>>>>>>> ce5436c0c72426cab42d5d8dd56b56bc3cfb4311
                 <h1
                   className="heading"
                   data-aos="fade-down"
