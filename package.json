@@ -34,5 +34,8 @@
     "react-helmet": "^5.2.1",
     "react-modal": "^3.8.2",
     "yup": "^0.27.0"
+  },
+  "devDependencies": {
+    "gatsby-plugin-remove-trailing-slashes": "^2.1.2"
   }
 }
