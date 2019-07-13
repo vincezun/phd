@@ -26,7 +26,7 @@ const CaseStudyTemplate = ({ data }) => (
           <Breadcrumb
             link="case-studies"
             name={`\u00A0\u00A0/\u00A0\u00A0 Case Studies`}
-            subLink={`/case-studies/${data.cs.slug}`}
+            subLink={`case-studies/${data.cs.slug}`}
             subName={data.cs.name}
           />
           <img src={whiteCirle} alt="White Circle" className="white-circle" />

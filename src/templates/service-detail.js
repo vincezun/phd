@@ -22,7 +22,7 @@ const ServiceDetailTemplate = ({ data }) => (
           <Breadcrumb
             link={data.sd.serviceoverview.slug}
             name={`\u00A0\u00A0/\u00A0\u00A0${data.sd.serviceoverview.name}`}
-            subLink={`/${data.sd.serviceoverview.slug}/${data.sd.slug}`}
+            subLink={`${data.sd.serviceoverview.slug}/${data.sd.slug}`}
             subName={data.sd.name}
           />
           <h1

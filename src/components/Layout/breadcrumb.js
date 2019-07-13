@@ -20,7 +20,7 @@ const Breadcrumb = ({ link, name, subName, subLink }) => (
       </Link>
     </li>
     <li>
-      <Link to={`${subLink}`} activeClassName="active">
+      <Link to={`/${subLink}`} activeClassName="active">
         {subName}
       </Link>
     </li>

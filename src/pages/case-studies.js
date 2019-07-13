@@ -17,7 +17,12 @@ const CaseStudies = ({ data }) => (
       <section>
         <div className="hero-section w-container">
           <SEO title="Case Studies" />
-          <Breadcrumb link="case-studies" name="Case Studies" subLink="#" />
+          <Breadcrumb
+            link="case-studies"
+            name="Case Studies"
+            subLink=""
+            subName=""
+          />
           <h1
             className="heading"
             data-aos="fade-down"
