@@ -15,31 +15,31 @@ import CallUsBtn from '../components/Button/button-2';
 
 const ServiceDetailTemplate = ({ data }) => (
   <Layout>
-    <div className='service-detail-wrapper'>
+    <div className="service-detail-wrapper">
       <section>
-        <div className='hero-section w-container'>
+        <div className="hero-section w-container">
           <SEO title={data.sd.serviceoverview.name} />
           <Breadcrumb
             link={data.sd.serviceoverview.slug}
             name={`\u00A0\u00A0/\u00A0\u00A0${data.sd.serviceoverview.name}`}
-            subLink={`${data.sd.serviceoverview.slug}/${data.sd.slug}`}
+            subLink={`/${data.sd.serviceoverview.slug}/${data.sd.slug}`}
             subName={data.sd.name}
           />
           <h1
-            className='heading'
-            data-aos='fade-down'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="heading"
+            data-aos="fade-down"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
             {data.sd.name}
           </h1>
           <p
-            className='description'
-            data-aos='fade-down'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="description"
+            data-aos="fade-down"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
             {data.sd.introductionText}
           </p>
@@ -47,23 +47,23 @@ const ServiceDetailTemplate = ({ data }) => (
         </div>
       </section>
       <section>
-        <div className='tool-list'>
+        <div className="tool-list">
           <p
-            className='title'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="title"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
             {data.sd.toolListHeading}
           </p>
           <p
-            className='description'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
-            data-aos-anchor='.title'
+            className="description"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-aos-anchor=".title"
           >
             {data.sd.toolListText}
           </p>
@@ -72,7 +72,7 @@ const ServiceDetailTemplate = ({ data }) => (
               key={document.id}
               toolName={document.name}
               toolDescription={document.details}
-              className='tool-details'
+              className="tool-details"
             />
           ))}
         </div>

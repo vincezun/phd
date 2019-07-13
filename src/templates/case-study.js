@@ -19,43 +19,43 @@ import CallUsBtn from '../components/Button/button-2';
 
 const CaseStudyTemplate = ({ data }) => (
   <Layout>
-    <div className='case-study-wrapper'>
+    <div className="case-study-wrapper">
       <section>
-        <div className='hero-section w-container'>
-          <SEO title='Case Studies' />
+        <div className="hero-section w-container">
+          <SEO title="Case Studies" />
           <Breadcrumb
-            link='case-studies'
+            link="case-studies"
             name={`\u00A0\u00A0/\u00A0\u00A0 Case Studies`}
-            subLink={`case-studies/${data.cs.slug}`}
+            subLink={`/case-studies/${data.cs.slug}`}
             subName={data.cs.name}
           />
-          <img src={whiteCirle} alt='White Circle' className='white-circle' />
+          <img src={whiteCirle} alt="White Circle" className="white-circle" />
           <img
             src={whiteTileHorizontal}
-            alt='White Tile Horizontal'
-            className='white-tile-horizontal'
+            alt="White Tile Horizontal"
+            className="white-tile-horizontal"
           />
           <img
             src={whiteTileVertical}
-            alt='White Tile Vertical'
-            className='white-tile-vertical'
+            alt="White Tile Vertical"
+            className="white-tile-vertical"
           />
           <h1
-            className='heading'
-            data-aos='fade-down'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="heading"
+            data-aos="fade-down"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
             {data.cs.name}
           </h1>
           <p
-            className='description'
-            data-aos='fade-down'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
-            data-aos-anchor='.heading'
+            className="description"
+            data-aos="fade-down"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-aos-anchor=".heading"
           >
             {data.cs.introduction}
           </p>
@@ -63,33 +63,33 @@ const CaseStudyTemplate = ({ data }) => (
         </div>
       </section>
       <section>
-        <div className='case-study-details'>
+        <div className="case-study-details">
           <p
-            className='sub-title'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
+            className="sub-title"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
           >
             THE BRIEF
           </p>
           <p
-            className='title'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
-            data-aos-anchor='.sub-title'
+            className="title"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-aos-anchor=".sub-title"
           >
             What Adidas Needed
           </p>
           <p
-            className='description'
-            data-aos='fade-up'
-            data-aos-easing='ease'
-            data-aos-duration='1000'
-            data-aos-delay='300'
-            data-aos-anchor='.title'
+            className="description"
+            data-aos="fade-up"
+            data-aos-easing="ease"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-aos-anchor=".title"
           >
             {data.cs.details}
           </p>

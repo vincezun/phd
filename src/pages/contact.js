@@ -30,7 +30,7 @@ class Contact extends Component {
               aria-label="Plant Hire Division Contact"
             >
               <SEO title="Contact" />
-              <Breadcrumb link="contact" name="Contact" subLink="" />
+              <Breadcrumb link="contact" name="Contact" subLink="#" />
               <h1
                 className="heading"
                 data-aos="fade-down"

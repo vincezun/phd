@@ -28,7 +28,7 @@ const PlantHire = ({ data }) => (
             return (
               <div key={id}>
                 <SEO title={name} />
-                <Breadcrumb link={slug} name={name} subLink="" />
+                <Breadcrumb link={slug} name={name} subLink="#" />
                 <h1
                   className="heading"
                   data-aos="fade-down"
