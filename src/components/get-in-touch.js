@@ -5,13 +5,7 @@ import '../styles/get-in-touch.scss';
 
 const GetInTouch = () => (
   <section className="stripe-tile-background">
-    <div
-      className="get-in-touch w-container"
-      // data-aos='fade-up'
-      // data-aos-easing='ease'
-      // data-aos-duration='1000'
-      // data-aos-delay='300'
-    >
+    <div className="get-in-touch w-container">
       <div>
         <h2 className="title">
           Cant find what your looking for? We can source most equipment
